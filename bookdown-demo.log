@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.4)  8 APR 2022 13:29
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.4)  8 APR 2022 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -858,23 +858,23 @@ chapter 3.
 ]
 chapter 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 247.
+(Font)              scaled to size 9.0pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 247.
+(Font)              scaled to size 6.0pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 247.
+(Font)              scaled to size 5.0pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00082pt on input line 247.
+(Font)              scaled to size 9.00082pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 247.
+(Font)              scaled to size 6.00055pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 247.
+(Font)              scaled to size 5.00046pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 247.
+(Font)              scaled to size 8.99904pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 247.
+(Font)              scaled to size 5.99936pt on input line 249.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 247.
+(Font)              scaled to size 4.99947pt on input line 249.
 [11] [12
 
 
@@ -924,10 +924,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 20779 strings out of 478178
- 401837 string characters out of 5852399
- 969322 words of memory out of 5000000
- 41116 multiletter control sequences out of 15000+600000
+ 20782 strings out of 478178
+ 401903 string characters out of 5852399
+ 969351 words of memory out of 5000000
+ 41119 multiletter control sequences out of 15000+600000
  478619 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,8n,121p,10636b,386s stack positions out of 10000i,1000n,20000p,200000b,200000s

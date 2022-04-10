@@ -25,3 +25,38 @@ A Primeira Lei da Termodinâmica estabelece que estes dois mecanismos alteram a 
 Atualmente eu ministro 5 cursos na área de Engenharia Térmica, e geralmente logo as primeiras aulas são voltadas para a aplicação da Primeira Lei aos sistema de interesse (como refrigeradores, motores de combustão interna ou usinas termelétricas). Na minha experiência como professor, a Primeira Lei é de fácil entendimento e bastante voltada à solução de problemas práticos de engenharia [@bib:bejan], como calcular a potência de um ciclo ou a quantidade de calor necessária para um processo de aquecimento.
 
 Isso não quer dizer, porém, que este é um assunto "básico demais". Na sua análise de um refrigerador magnético, uma tecnologia bastante inovadora, @bib:nakashima22 começaram a análise simplesmente aplicando a Primeira Lei da Termodinâmica e indentificando as trocas de calor e trabalho, que então são modeladas separadamente. A conservação da energia conforme expressa pela Primeira Lei também é um critério básico de convergência na simulação numérica de sistemas complexos.
+
+## O que entra na energia total de um sistema
+
+Um sistema tem formas macroscópicas de energia, que podem ser medidas facilmente e são relativas ao corpo como um todo. A energia cinética é proporcional à velocidade, uma grandeza de medição dominada. A energia potencial gravitacional (e outras formas de energia potencial, como elétrica e mecânica) também podem ser medidas.
+
+Mas um sistema também tem formas microscópicas de energia, que não se manifestam tão diretamente em fenômenos macroscópicos. Pegue um copo d'água hermeticamente fechado e rígido sobre uma mesa: a água está parada e sua altura em relação ao chão podem ser mensurados em alguns segundos. Mas responda rapidamente: qual a energia interna deste copo?
+
+Se você colocar o copo para aquecer sobre uma chama, por exemplo, por alguns minutos, a sua energia cinética continua zero, e a sua energia potencial não mudou. O que mudou foi uma propriedade *intensiva*: a temperatura. Um termômetro de mercúrio vai indicar diferentes alturas da água fria e da água quente. E isto é uma propriedade que não depende do tamanho do copo, pois é definida localmente. E se o volume não mudou, nenhuma forma de energia macroscópica mudou, então esse aumento de temperatura só pode significar que a *energia interna* do sistema mudou.
+
+Voltando à definição da Primeira Lei, energia foi transferida por calor da chama para o copo. Mas como medir o calor? Acontece que é muito mais fácil medir trabalho, e a Primeira Lei nos diz que, se conseguirmos atingir a mesma variação de temperatura do sistema, mantendo todas as outras propriedades constantes, usando *apenas* uma hélice dentro do copo movimentada por um motor, então a quantidade de trabalho gasto pelo motor (que pode ser medido pela medição da corrente e da tensão elétrica sobre o motor, bem como o tempo gasto no processo) é *exatamente igual à quantidade de calor do sistema original*.
+
+O *apenas* do parágrafo anterior é importante. Para medir a influência apenas do trabalho sobre a energia, precisamos impedir a transferência de calor. Experimentalmente, verifica-se que existem *materiais adiabáticos* que conseguem manter a energia de um sistema. Por exemplo, um bloco de gelo colocado dentro de um recipiente de paredes adiabáticas não derrete - e se nada macroscópico mudou e a temperatura do gelo não mudou, então a energia foi conservada.
+
+Em resumo: a variação de energia interna entre dois estados pode ser *controlada* com paredes adiabáticas, e *medida* calculando o trabalho gasto ou obtido nesse processo (controlando passo-a-passo) com paredes adiabáticas [@bib:callen]
+
+Computacionalmente, podemos usar uma biblioteca como [CoolProp](http://www.coolprop.org), com o seguinte código em [Python](https://www.anaconda.com/products/distribution):
+
+```{python}
+from CoolProp.CoolProp import PropsSI
+T1 = 25 + 273
+T2 = 50 + 273
+
+u1 = PropsSI("U","T",T1,"Q",0,"Water")
+u2 = PropsSI("U","T",T2,"Q",0,"Water")
+
+du = u2 - u1
+print("Variação de energia interna de 1 kg de água entre %d e %d ˚C= %.2f kJ" %(
+  T1-273,
+  T2-273,
+  du*1e-3
+))
+```
+
+
+

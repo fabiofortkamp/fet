@@ -1,5 +1,24 @@
-book_filename: "bookdown-demo"
-language:
-  ui:
-    chapter_name: "Chapter "
+book_filename: "fet"
 delete_merged_file: true
+
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabela '
+    eq: 'Eq. '
+    thm: 'Teorema '
+    lem: 'Lema '
+    cor: 'Corolário '
+    prp: 'Proposição '
+    cnj: 'Conjectura '
+    def: 'Definição '
+    exm: 'Exexmeplo '
+    exr: 'Exercício '
+    hyp: 'Hipótese '
+    proof: 'Prova '
+    remark: 'Observação '
+    solution: 'Solução '
+  ui:
+    edit: Editar
+    chapter_name: 'Capítulo '
+    appendix_name: 'Apêndice'

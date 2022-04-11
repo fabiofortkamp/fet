@@ -2,25 +2,30 @@
 
 A Transferência de Calor por Condução é um modo microscópico de transferência de energia, sem movimento de matéria. Sentimo-la quando pegamos no cabo metálico de uma panela que está ao fogo; o cabo, originalmente frio, ficou quente, mesmo estando fisicamente longe da fonte de calor. Em fluidos, ela está associada à colisões e movimentos moleculares, enquanto que em sólidos a condução de calor é melhor explicada por vibrações da rede cristalina dos sólidos [@bib:cengel-heat].
 
-O que influencia a condução? A espessura por onde o calor é conduzido é importante: no inverno, tentamos nos isolar termicamente adicionando mais camadas de roupas grossas. A área de transferência de calor também é importante: os arames em um condensador de refrigerador não servem para escoar refrigerante, mas para multiplicar a área de contato com o ar. A diferença de temperaturas é o que rege a transferência de calor (se uma transferência de energia não depende da diferença de temperaturas, então ela é trabalho  - conferir Capítulo \@ref{#primeli}). E experimentalmente podemos observar que alguns materiais conduzem melhor calor que outros - se o cabo do exemplo do parágrafo anterior fosse de plástico, dificilmente sentiríamos a energia fluindo.
+O que influencia a condução? A espessura por onde o calor é conduzido é importante: no inverno, tentamos nos isolar termicamente adicionando mais camadas de roupas grossas. A área de transferência de calor também é importante: os arames em um condensador de refrigerador não servem para escoar refrigerante, mas para multiplicar a área de contato com o ar. A diferença de temperaturas é o que rege a transferência de calor (se uma transferência de energia não depende da diferença de temperaturas, então ela é trabalho  - conferir Capítulo \@ref(primlei)). E experimentalmente podemos observar que alguns materiais conduzem melhor calor que outros - se o cabo do exemplo do parágrafo anterior fosse de plástico, dificilmente sentiríamos a energia fluindo.
 
-Ao analisar problemas térmicas, frequentemente a primeira ferramenta do engenheiro ou engenheira é aplicar a Primeira Lei da Termodinâmica (Capítulo \@ref{#primlei}). Os termos de calor nesse balanço dependem da temperatura, mas a Termodinâmica sozinha não diz nada de como é essa dependência, e aí entram os conceitos de transferência de calor. A lei constitutiva de condução de calor é a **Lei de Fourier**: em um ponto em um meio isotrópico, o fluxo de calor é:
+Ao analisar problemas térmicas, frequentemente a primeira ferramenta do engenheiro ou engenheira é aplicar a Primeira Lei da Termodinâmica (Capítulo \@ref(primlei)). Os termos de calor nesse balanço dependem da temperatura, mas a Termodinâmica sozinha não diz nada de como é essa dependência, e aí entram os conceitos de transferência de calor. A lei constitutiva de condução de calor é a **Lei de Fourier**: em um ponto em um meio isotrópico, o fluxo de calor é:
 
-$$
-\vec{q''} = -k \nabla T
-$$
+\begin{equation} 
+  \vec{q''} = -k \nabla T
+  (\#eq:fourier)
+\end{equation} 
 
 e a taxa total de transferência de calor que atravessa uma superfície de área $A$ é:
 
-$$
-\dot{Q} = \int_A \vec{q''} \cdot \hat{n} \mathrm{d} \sigma
-$$
+\begin{equation} 
+  \dot{Q} = \int_A \vec{q''} \cdot \hat{n} \mathrm{d} \sigma
+  (\#eq:taxa)
+\end{equation} 
 
 Na Lei de Fourier, a condutividade térmica $k$ é um coeficiente escalar de proporcionalidade entre o fluxo de calor e o gradiente de tempreatura. Na integral acima,  $\hat{n}$ é o vetor normal apontando para fora da superfície.
 
 ## Condução de Calor e Segunda Lei da Termodinâmica
 
-[[20220214171951 Why the thermal conductivity must be positive]]
+Na Eq. \@ref(eq:fourier), a condutividade deve ser sempre positiva para que o calor flua contra o gradiente de temperaturas, isto é, de uma região conte para uma região fria. Um valor $k = 0$ significa simplesmente que o material é um isolante perfeito, e alguns materiais têm mesmo condutividades muito pequenas. Mas o que aconteceria se $k < 0$?
+
+Considere um sistema que está originalmente frio, como uma porção de alimentos, que foi resfriada possivelmente pela ação de um sistema de refrigeração. Vamos então pegar esse alimento e separá-lo do ambiente quente por paredes feitas do material com $k < 0$. O que vai acontecer: o calor vai fluir, pela Lei de Fourier, do ambiente frio para o ambiente quente. Vamos dizer que o ambiente frio é mantido a temperatura constante porque paralelamente há uma brecha em uma das paredes que deixa entrar calor. O ambiente frio está funcionando como um sistema fechado em ciclos (já que ele é aquecido pela brecha de calor e resfriado pelo material especial, voltando ao ponto de partida indefinidamente - verja Capítulo \@ref(ciclos), que transfere calor para um sistema quente, sem nenhuma adição de trabalho - o que viola o Enunciado de Clausius da Segunda Lei da Termodinâmica (Capítulo \@ref(seglei)). Logo, esse material "especial" é impossível!
+
 
 Fourier's Law is simply an experimental linearized relation between temperatures and heat transfer rates; these should be input in an energy conservation equation, the First Law of Thermodynamics. Assuming no macroscopic flow, no work transfer, an incompressible medium with constant specific heat, allowing for temperature dependence on the thermal conductivity and an uniform heat generation rate (the result of nuclear or chemical reactions or electrical dissipation), we arrive at the so-called *heat conduction equation*, here presented in cartesian coordinates for a more straight-forward analysis:
 

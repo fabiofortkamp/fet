@@ -10,9 +10,11 @@ O nosso sistema está então em um *estado termodinâmico*, que vamos chamar de 
 
 A Primeira Lei da Termodinâmica pode ser expressa então para esse caso como:
 
-$$
-E_2 - E_1 = Q - W
-$$
+
+\begin{equation} 
+  E_2 - E_1 = Q - W
+  (\#eq:primlei)
+\end{equation} 
 
 A transferência de calor é sempre associada a uma diferença de temperatura, e pode ser calculada e medida usando os conceitos de condução (Capítulo \@ref(conducao)), convecção (Capítulo \@ref(conveccao)) e radiação (Capítulo \@ref(radiacao)).
 

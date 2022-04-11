@@ -1,3 +1,66 @@
 # Transferência de Calor por Condução {#conducao}
 
-We have finished a nice book.
+A Transferência de Calor por Condução é um modo microscópico de transferência de energia, sem movimento de matéria. Sentimo-la quando pegamos no cabo metálico de uma panela que está ao fogo; o cabo, originalmente frio, ficou quente, mesmo estando fisicamente longe da fonte de calor. Em fluidos, ela está associada à colisões e movimentos moleculares, enquanto que em sólidos a condução de calor é melhor explicada por vibrações da rede cristalina dos sólidos [@bib:cengel-heat].
+
+O que influencia a condução? A espessura por onde o calor é conduzido é importante: no inverno, tentamos nos isolar termicamente adicionando mais camadas de roupas grossas. A área de transferência de calor também é importante: os arames em um condensador de refrigerador não servem para escoar refrigerante, mas para multiplicar a área de contato com o ar. A diferença de temperaturas é o que rege a transferência de calor (se uma transferência de energia não depende da diferença de temperaturas, então ela é trabalho  - conferir Capítulo \@ref{#primeli}). E experimentalmente podemos observar que alguns materiais conduzem melhor calor que outros - se o cabo do exemplo do parágrafo anterior fosse de plástico, dificilmente sentiríamos a energia fluindo.
+
+Ao analisar problemas térmicas, frequentemente a primeira ferramenta do engenheiro ou engenheira é aplicar a Primeira Lei da Termodinâmica (Capítulo \@ref{#primlei}). Os termos de calor nesse balanço dependem da temperatura, mas a Termodinâmica sozinha não diz nada de como é essa dependência, e aí entram os conceitos de transferência de calor. A lei constitutiva de condução de calor é a **Lei de Fourier**: em um ponto em um meio isotrópico, o fluxo de calor é:
+
+$$
+\vec{q''} = -k \nabla T
+$$
+
+e a taxa total de transferência de calor que atravessa uma superfície de área $A$ é:
+
+$$
+\dot{Q} = \int_A \vec{q''} \cdot \hat{n} \mathrm{d} \sigma
+$$
+
+Na Lei de Fourier, a condutividade térmica $k$ é um coeficiente escalar de proporcionalidade entre o fluxo de calor e o gradiente de tempreatura. Na integral acima,  $\hat{n}$ é o vetor normal apontando para fora da superfície.
+
+## Condução de Calor e Segunda Lei da Termodinâmica
+
+[[20220214171951 Why the thermal conductivity must be positive]]
+
+Fourier's Law is simply an experimental linearized relation between temperatures and heat transfer rates; these should be input in an energy conservation equation, the First Law of Thermodynamics. Assuming no macroscopic flow, no work transfer, an incompressible medium with constant specific heat, allowing for temperature dependence on the thermal conductivity and an uniform heat generation rate (the result of nuclear or chemical reactions or electrical dissipation), we arrive at the so-called *heat conduction equation*, here presented in cartesian coordinates for a more straight-forward analysis:
+
+
+$$
+\rho c_p \frac{\partial T}{\partial t} = \frac{\partial}{\partial x} \left( k \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y} \left( k \frac{\partial T}{\partial y}\right) +  \frac{\partial}{\partial z} \left( k \frac{\partial T}{\partial z}\right) + \dot{q}'''
+$$
+
+In the study of heat transfer, it is then customary to focus on thermal resistances, methods of separation of variables, lumped capacitance models; but we must not forget that everything starts with this equation. Solving a heat conduction problem means solving the above equation, with appropriate boundary conditions, to find the temperature profiles, and then go back to Fourier's Law to compute heat transfers. 
+
+Consider the situation of evaluating a new coating material for electrical wires. Why do we need to compute both the temperature profiles and heat transfer rate?
+
+- We need to calculate the temperature to evaluate thermophysical properties, including the resistance of the material - we can check whether the temperature is too high or too low for the material
+- We need to calculate the heat transfer rate because energy is what is conserved, not temperature. In steady state, the heat conduction rate across the coating must match the dissipated heat in the electrical wire and the heat transported by the surroudings - and there are models for these phenomena.
+
+Heat conduction is a mathematics-rich field. The diffusion equation can be discretized and solved with numerical methods, investing things such as the use of composite materials, where the conductivity can be tuned in specific regions, nature-inspired geometries, and the frontiers of very high and very low temperatures.
+
+
+
+
+## Equação da Difusão Térmica
+
+In cartesian coordinates:
+
+$$
+\rho c_p \frac{\partial T}{\partial t} = \frac{\partial}{\partial x} \left( k \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y} \left( k \frac{\partial T}{\partial y}\right) +  \frac{\partial}{\partial z} \left( k \frac{\partial T}{\partial z}\right) + \dot{q}'''
+$$
+
+In cylindrical coordinates:
+
+$$
+\rho c_p \frac{\partial T}{\partial t} = \frac{1}{r}\frac{\partial}{\partial r} \left( k r \frac{\partial T}{\partial r}\right) + \frac{1}{r^2}\frac{\partial}{\partial \phi} \left( k \frac{\partial T}{\partial \phi}\right) +  \frac{\partial}{\partial z} \left( k \frac{\partial T}{\partial z}\right) + \dot{q}'''
+$$
+
+In spherical coordinates:
+
+$$
+\rho c_p \frac{\partial T}{\partial t} = \frac{1}{r^2}\frac{\partial}{\partial r} \left( k r^2 \frac{\partial T}{\partial r}\right) + \frac{1}{r^2 \sin^2\theta}\frac{\partial}{\partial \phi} \left( k \frac{\partial T}{\partial \phi}\right) + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( k \sin \theta \frac{\partial T}{\partial \theta}\right) + \dot{q}'''
+$$
+
+In the above equations, $\phi$ is the polar angle, measured in the $xy$ plane, and $\theta$ is the azimuthal angle, measured from the $z$-axis.
+
+

@@ -1,23 +1,36 @@
 # Processos e Ciclos Termodinâmicos {#ciclos}
 
-We describe our methods in this chapter.
+*Processos e Ciclos Termodinâmicos* são maneiras que a Engenharia encontrou para promover transferências de energia entre dois sistemas. A água de um poço precisa de energia para escoar até uma caixa d'água, então ela passa por um *processo de compressão*, consumindo trabalho no meio, para ganhar energia suficiente e escoar.
 
-Math can be added in body using usual syntax like this 
+Mais precisamente falando, um processo termodinâmica é uma mudança de estado de um sistema, i.e. pegamos uma porção de massa ou uma região delimitada do espaço e mudamos *alguma* propriedade sua. No exemplo acima, uma bomba faz força sobre água, que reage aumentando a pressão para suportar essa tensão normal maior. Uma propriedade mudou, logo o estado mudou, logo um processo aconteceu.
 
-## math example
+Um ciclo é um processo especial - ou, talvez melhor dizendo, uma sequência de processos, o que não deixa de ser um processo também - que faz o sistema retornar ao estado inicial. No exemplo acima, após pressurizar (e inevitalmente esquentar) a água, fazemos ela escoar por uma série de tubulações, onde ela perde pressão e calor para o ambiente, de maneira que volta para o reservatório de alimentação da bomba *exatamente na mesma pressão e temperatura* em que antes havia entrado.
 
-$p$ is unknown but expected to be around 1/3. Standard error will be approximated
+A Engenharia Térmica põe muita ênfase no estudo de ciclos, porque eles podem funcionar indefinidamente sem alimentação de fluido de trabalho. No exemplo acima, você pode fazer água escoar por canos e, se dimensionar o sistema com o tamanho apropriado e garantir que não há reações de oxidação, ele pode funcionar até o fim dos tempos com a mesma quantidade de água (desde que a bomba continue recebendo trabalho para funcionar), e da mesma maneira. Se a bomba é a mesma e água na entrada está na mesma condição, então a saída não vai ficar cada vez mais quente - vai permanecer no mesmo estado. Esta *estabilidade* de operação é bastante interessante.
 
-$$
-SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
-$$
+## Estudo de ciclos e processos
 
-You can also use math in footnotes like this^[where we mention $p = \frac{a}{b}$].
+Pedagogicamente, costumamos estudar dois critérios de classificação de ciclos:
 
-We will approximate standard error to 0.027[^longnote]
+1. Quanto à fase do fluido de trabalho: ciclos a gás ou a vapor condensáveis
+2. Quanto ao sentido do trabalho: ciclos de potência (entregam trabalho líquido para a vizinhança) ou de refrigeração (recebem trabalho da vizinhança).
 
-[^longnote]: $p$ is unknown but expected to be around 1/3. Standard error will be approximated
+Cada arquitetura de ciclo, seja qual for o fluido ou a finalidade, vai ser composto de algumas classes de processos especiais: processos isotérmicos, isentrópicos, isobáricos, isovolumétricos, iso-entálpicos. 
 
-    $$
-    SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
-    $$
+## Por que tantos ciclos diferentes?
+
+Aliás, por que falar de *arquitetura* de ciclos, e por que existem tantas opções.
+
+Processos e ciclos termodinâmicos obedecem às leis da termodinâmica (veja Capítulos \@ref(primlei) e \@ref(seglei)). A Segunda Lei, em particular, impõe o limite de que nenhum ciclo, seja qual for sua arquitetura, não vai consumir menos trabalho (ou gerar mais trabalho) que um ciclo *totalmente reversível*, isto é, que pode ser executado em qualquer sentido (gerando ou consumindo trabalho) sem nenhuma diferença para a vizinhaça. 
+
+Para isto ser possível, todo processo de transferência de calor com a vizinhaça precisa ser *isotérmico*, com uma diferença de temperatura infinitesimal entre fluido de trabalho e fonte; caso contrário, a fonte quente transfere calor para o fluido e não vai receber calor do mesmo, mesmo que ele escoe em sentido contrário. O fato de que o calor sempre escoa no sentido contra o gradiente de temperatura, e a Segunda Lei da Termodâmica em geral, são comprovados experimentalmente "à exaustão" [@bib:callen].
+
+É aqui que a Engenharia se separa da Física. Para garantir a isotermia na transferência de calor, precisamos de processos infinitamente lentos: você transfere uma quantidade infinitesimal de calor para o fluido, espera ele se expandir para estabilizar, e então repete, mas essa quantidade de calor transferida passo a passo nunca pode ser muito grande, caso contrário já há uma diferença de temperaturas e o processo não é mais reversível. Um processo que demora um tempo infinito para acontecer não é nada *prático*.
+
+Basicamente, os diferentes tipos de ciclos buscam diferentes maneiras de transferir calor que sejam mais fáceis (mais baratas para construir ou operar), e então fazer ajustes com base nisso.
+
+## Exemplos de ciclos
+
+## Métricas de desempenho de ciclos
+
+## Relevância ambiental dos fluidos

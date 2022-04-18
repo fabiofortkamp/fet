@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Segunda Lei da Termodinâmica | Fundamentos de Engenharia Térmica</title>
+  <meta name="description" content="Coleção de ensaios de treino para concursos para Professor do Magistério de Ensino Superior na área de Engenharia Térmica" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Segunda Lei da Termodinâmica | Fundamentos de Engenharia Térmica" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Coleção de ensaios de treino para concursos para Professor do Magistério de Ensino Superior na área de Engenharia Térmica" />
+  <meta name="github-repo" content="fabiofortkamp/fet" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Segunda Lei da Termodinâmica | Fundamentos de Engenharia Térmica" />
+  
+  <meta name="twitter:description" content="Coleção de ensaios de treino para concursos para Professor do Magistério de Ensino Superior na área de Engenharia Térmica" />
+  
+
+<meta name="author" content="Fábio P. Fortkamp" />
+
+
+<meta name="date" content="2022-04-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="primlei.html"/>
+<link rel="next" href="ciclos.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Fund. Eng. Térmica</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução<span></span></a></li>
+<li class="chapter" data-level="2" data-path="primlei.html"><a href="primlei.html"><i class="fa fa-check"></i><b>2</b> Primeira Lei da Termodinâmica<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="primlei.html"><a href="primlei.html#primeira-lei-assunto-básico"><i class="fa fa-check"></i><b>2.1</b> Primeira Lei: assunto básico?<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="primlei.html"><a href="primlei.html#o-que-entra-na-energia-total-de-um-sistema"><i class="fa fa-check"></i><b>2.2</b> O que entra na energia total de um sistema<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="seglei.html"><a href="seglei.html"><i class="fa fa-check"></i><b>3</b> Segunda Lei da Termodinâmica<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="seglei.html"><a href="seglei.html#geração-de-entropia-e-irreversibilidades"><i class="fa fa-check"></i><b>3.1</b> Geração de entropia e irreversibilidades<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ciclos.html"><a href="ciclos.html"><i class="fa fa-check"></i><b>4</b> Processos e Ciclos Termodinâmicos<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ciclos.html"><a href="ciclos.html#estudo-de-ciclos-e-processos"><i class="fa fa-check"></i><b>4.1</b> Estudo de ciclos e processos<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="ciclos.html"><a href="ciclos.html#por-que-tantos-ciclos-diferentes"><i class="fa fa-check"></i><b>4.2</b> Por que tantos ciclos diferentes?<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="ciclos.html"><a href="ciclos.html#exemplos-de-ciclos"><i class="fa fa-check"></i><b>4.3</b> Exemplos de ciclos<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="ciclos.html"><a href="ciclos.html#métricas-de-desempenho-de-ciclos"><i class="fa fa-check"></i><b>4.4</b> Métricas de desempenho de ciclos<span></span></a></li>
+<li class="chapter" data-level="4.5" data-path="ciclos.html"><a href="ciclos.html#relevância-ambiental-dos-fluidos"><i class="fa fa-check"></i><b>4.5</b> Relevância ambiental dos fluidos<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="termodinâmica-de-misturas.html"><a href="termodinâmica-de-misturas.html"><i class="fa fa-check"></i><b>5</b> Termodinâmica de Misturas<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="termodinâmica-de-misturas.html"><a href="termodinâmica-de-misturas.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="termodinâmica-de-misturas.html"><a href="termodinâmica-de-misturas.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="termodinâmica-química.html"><a href="termodinâmica-química.html"><i class="fa fa-check"></i><b>6</b> Termodinâmica Química<span></span></a></li>
+<li class="chapter" data-level="7" data-path="conducao.html"><a href="conducao.html"><i class="fa fa-check"></i><b>7</b> Transferência de Calor por Condução<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="conducao.html"><a href="conducao.html#condução-de-calor-e-segunda-lei-da-termodinâmica"><i class="fa fa-check"></i><b>7.1</b> Condução de Calor e Segunda Lei da Termodinâmica<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="conducao.html"><a href="conducao.html#equação-da-difusão-térmica"><i class="fa fa-check"></i><b>7.2</b> Equação da Difusão Térmica<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="conveccao.html"><a href="conveccao.html"><i class="fa fa-check"></i><b>8</b> Transferência de Calor por Convecção<span></span></a></li>
+<li class="chapter" data-level="9" data-path="radiacao.html"><a href="radiacao.html"><i class="fa fa-check"></i><b>9</b> Transferência de Calor por Radiação<span></span></a></li>
+<li class="chapter" data-level="10" data-path="transferência-de-calor-com-mudança-de-fase.html"><a href="transferência-de-calor-com-mudança-de-fase.html"><i class="fa fa-check"></i><b>10</b> Transferência de Calor com Mudança de Fase<span></span></a></li>
+<li class="chapter" data-level="11" data-path="transferência-de-calor-com-reação-química.html"><a href="transferência-de-calor-com-reação-química.html"><i class="fa fa-check"></i><b>11</b> Transferência de Calor com Reação Química<span></span></a></li>
+<li class="chapter" data-level="12" data-path="trocadores-de-calor.html"><a href="trocadores-de-calor.html"><i class="fa fa-check"></i><b>12</b> Trocadores de Calor<span></span></a></li>
+<li><a href="referências.html#referências">Referências<span></span></a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fundamentos de Engenharia Térmica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="seglei" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Segunda Lei da Termodinâmica<a href="seglei.html#seglei" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Principalmente em países tropicais como o Brasil, refrigeradores são eletrodomésticos essenciais, e é uma tragédia social que algumas famílias não tenham acesso à eletricidade ou aos recursos para adquirir uma “geladeira”, como é comumente chamada. Para aqueles lares que possuem um refrigerador doméstico, o seu uso impede ou pelo menos retarda a degradação de alimentos e bebidas que, se submetidas às altas temperaturas ambientes, sofreriam muito rapidamente a ação bacteriana e fúngica que impede o seu consumo.</p>
+<p>Um refrigerador precisa manter no seu interior um ambiente frio, com temperaturas menores que a do ambiente, suficiente baixas para impedir a ação danosa descrita no parágrafo anterior. Um meio simples de criar essa separação é simplesmente armazenar alimentos e bebidas em uma caixa com gelo, onde as paredes sejam de material isolante. Eram assim as primeiras geladeiras, como o próprio nome indica: armários de gelo, onde um grande bloco de gelo (que poderia ser minerado de lagos ou rios congelados) é colocado em uma prateleira superior, e os alimentos são armazenados embaixo; por convecção natural, o ar esfria em contato com o gelo, absorve calor dos alimentos, e sobe, cedendo energia para o gelo, que então derrete - o que é o principal problema. Esse tipo de dispositivo tem uma vida útil definida; quando o bloco de gelo derrete, a água precisa ser drenada e o bloco reposto, antes que a temperatura do gabinete refrigerado volte a subir.</p>
+<p>O desafio de engenharia é criar um sistema que funcione em ciclos, continuamente, e com um sistema fechado, sem precisar repor ou drenar fluidos. Será que é possível encontrar algum material ou sistema que refrigere continuamente um ambiente isolado? A resposta, baseada em experimentos, é não: <em>nunca</em> se observou nenhum tipo de material ou arranjo que permitisse um ambiente frio transferir calor para o ambiente quente, funcionando em ciclos em um sistema fechado, sem nenhum outro tipo de ação externa, ou uma “ajuda” para isso acontecer - esse fato é conhecido como o <strong>Enunciado de Clausius da Segunda Lei da Termodinâmica</strong>.</p>
+<p>Um refrigerador não viola o enunciado de Clausius porque nesse caso <em>há</em> um elemento externo - um compressor, que consome trabalho elétrico e transfere trabalho para o fluido refrigerante que circula pelo sistema (fechado, sem sair ou entrar do sistema como um todo) e realiza as trocas de calor - do ambiente frio para o fluido e depois do fluido para o ambiente quente.</p>
+<p>A potência do compressor é algo que pagamos - literalmente. É de interesse de engenharia, portanto, encontrar maneiras de minimizar essa potência. Ela não pode ser zero pelo Enunciado de Clausius. Mas o quão pequena ela pode ser?</p>
+<p>Talvez surpreendentemente, essa pergunta está ligada a um conceito que parece não relacionado com o de refrigeradores - o de máquinas térmicas. Uma máquina térmica é um dispositivo cíclico que recebe calor de uma fonte (também chamado de reservatório) quente, converte uma parte em trabalho, e descarta o calor residual em uma fonte fria. Uma usina termelétrica é talvez o exemplo mais simples: a combustão de um combustível com ar gera uma frente de chama quente, que transfere calor (principalmente por radiação) para uma tubulação onde a água líquida é vaporizada e superaquecida; este vapor movimenta uma turbina e perde pressão, e esse vapor a baixa pressão é condensado de volta (e o calor é transferido, geralmente, para uma grande torre de arrefecimento). Neste caso, nós <em>ganhamos</em> a potência gerada, e vem a pergunta: qual o limite máximo da potência gerada? É possível uma eficiência térmica (razão entre potência gerada e calor fornecido) de 100%?</p>
+<p>Assim como no caso de refrigeradores, baseamo-nos em observações experimentais para afirmar que não: é impossível construir uma máquina térmica que funcione em ciclos com um sistema fechado, <em>gere</em> potência para fora do sistema e troque calor com apenas um reservatório térmico. Esse fato é conhecido como o <strong>Enunciado de Kelvin-Planck da Segunda Lei da Termodinâmica</strong>.</p>
+<p>A Segunda Lei não é uma equação, mas uma desigualdade: ela impõe limites sobre a eficiência de máquinas térmicas e refrigeradores. Em termos pedagógicos, isso parece fazer a Segunda Lei não ser tão priorizada quanto a Primeira Lei (ver Cap. @ref(#primlei)), com suas equações relacionando energia, calor e trabalho que podem ser <em>resolvidas</em> para alguma grandeza de interesse <span class="citation">(<a href="#ref-bib:bejan" role="doc-biblioref">BEJAN, 2006</a>)</span>.</p>
+<p>Os trabalhos de Carnot respondem às perguntas colocadas neste texto: a chave para maximizar a eficiência é garantir processos e ciclos <em>reversíveis</em>, isto é, que possam ser executados em qualquer sentido sem diferenças para o sistema e a vizinhança. Em termos práticos, isto requereria trocadores de calor com área infinita, de maneira que a fonte e o fluido de trabalho estejam sempre em equilíbrio térmico.</p>
+<p>A menor potência consumida pelos refrigeradores é a potência de um refrigerador reversível. Para provar isso, vamos imaginar dois refrigeradores, R (de reversível) e G (de geral, que pode ser reversível ou não), entre dois reservatórios, a <span class="math inline">\(T_{\mathrm{H}}\)</span> e <span class="math inline">\(T_{\mathrm{L}}\)</span>. Vamos imaginar que os dois recebam a mesma <em>capacidade de refrigeração</em> da fonte fria, <span class="math inline">\({Q}_{\mathrm{L}}\)</span> (sendo este o calor transferido por ciclo completado). Vamos então supor que o refrigerador G é mais eficiente ou pelo menos tão eficiente quando o refrigerador real, <span class="math inline">\(W_{\mathrm{G}} \le W_{\mathrm{R}}\)</span> (onde <span class="math inline">\(W\)</span> é o trabalho consumido pelo sistema). Pela Primeira Lei , o calor rejeitado para a fonte quente por cada sistema ao final de um ciclo é:</p>
+<p><span class="math display">\[{Q}_{\mathrm{H}} = {Q}_{\mathrm{L}} + W\]</span></p>
+<p>Onde todas as grandezas são admitidas como positivas. Logo, <span class="math inline">\(Q_{\mathrm{H,G}} &lt; Q_{\mathrm{H,R}}\)</span></p>
+<p>Como o sistema R é reversível, podemos transformá-lo em uma máquina térmica, onde todos os valores de transferências de energia são preservados, e o sentido é invertido. Mas agora o que acontece: o refrigerador R recebe uma grande quantidade de calor da fonte quente, gera trabalho, e transfere calor que, sendo na mesma temperatura e de mesma magnitude, pode ser direcionado diretamente para o refrigerador G. Este vai consumir uma parte do trabalho gerado (já ele consome menos que o refrigerador reversível gera), rejeitar uma pequena quantidade de calor (idem). O sistema combinado é um sistema que troca calor com apenas um reservatório (já que o reservatório frio é inútil e, como falado, podemos desviar de uma máquina para outra) e gera uma quantidade líquida de trabalho. Isto viola o Enunciado de Kelvin-Planck - logo, entre duas temperaturas, não conseguimos fazer um refrigerador mais eficiente que um reversível. Se G também for reversível, podemos repetir o exercício e perceber que G não pode ser mais eficiente que R, e R não pode ser mais eficiente que G, e portanto ambos são equivalentes.</p>
+<p>Uma das métricas de desempenho de refrigeradores é o <em>coeficiente de performance</em>:</p>
+<p><span class="math display">\[\mathrm{COP} = \frac{{Q}_{\mathrm{L}}}{W}\]</span></p>
+<p>E, pelo que foi falado todos os refrigeradores reversíveis entre os mesmos reservatórios (caracterizados pelas mesmas temperaturas) possuem o mesmo COP.</p>
+<p>Mas qual é esse valor? Observe que, pela Primeira Lei:</p>
+<p><span class="math display">\[\mathrm{COP} = \frac{{Q}_{\mathrm{L}}}{{Q}_{\mathrm{H}} - {Q}_{\mathrm{L}}}\]</span></p>
+<p>A forma matemática da segunda lei é a Desigualdade de Clausius:</p>
+<p><span class="math display">\[\oint \frac{\delta Q}{T} \le 0\]</span></p>
+<p>Ou seja, ao longo de um ciclo, se somarmos a razão entre o calor transferido dividido pela temperatura na fronteira em que esse calor transferido, temos uma grandeza não-positiva. Se essa integral for positiva, é possível provar que os Enunciados acima são violados.</p>
+<p>A igualdade na desigualdade de Clausius corresponde ao caso limite, que como vimos, é o da reversibilidade. Assim, colocamos um volume de controle ao redor do condensador de tal maneira que a sua fronteira esteja na temperatura quente, e em volta do evaporador onde a fronteira esteja na temperatura fria. No caso reversível, então:</p>
+<p><span class="math display">\[\frac{{Q}_{\mathrm{L}}}{T_{\mathrm{L}}} = \frac{{Q}_{\mathrm{H}}}{T_{\mathrm{H}}}\]</span></p>
+<p>E portanto, dividindo a equação do COP por <span class="math inline">\(T_{\mathrm{L}}\)</span>:</p>
+<p><span class="math display">\[\mathrm{COP}_{\mathrm{rev}} = \frac{{T}_{\mathrm{L}}}{{T}_{\mathrm{H}} - {T}_{\mathrm{L}}}\]</span></p>
+<p>Por que o COP de refrigeradores é menor que o de reversíveis (ou seja, por que eles precisam de mais potência para mesma capacidade de refrigeração)? Por causa de desvios da reversibilidade. Se um condensador é mal dimensionado, o fluido vai escoar muito mais quente o ar em volta; esse processo não pode ser revertido pois, se este refrigerador funcionar como máquina térmica, o trocador não vai conseguir absorver calor da fonte quente (ar ambiente) estando mais quente que ele!</p>
+<div id="geração-de-entropia-e-irreversibilidades" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Geração de entropia e irreversibilidades<a href="seglei.html#geração-de-entropia-e-irreversibilidades" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Muito da pesquisa e desenvolvimento em engenharia é identificar maneiras de trazer o COP de refrigeradores reais mais próximo do COP de Carnot, através da identificação das perdas. Identificar (e priorizar) irreversibilidades, equilibrando desempenho termodinâmico com outros fatores (como custo, peso, ruído), é o desafio cotidiano do engenheiro de ciências térmicas.</p>
+<p>Em minha experiência com refrigeração magnética, uma tecnologia inovadora baseada em materiais sólidos, os trabalhos que tiveram mais impacto (discussões em congressos e citações em revistas) são aqueles que investigam em detalhes os processos que mais estão contribuindo para essa perda de eficiência.</p>
+<p>A desigualdade de Clausius pode ser transformada em uma equação:</p>
+<p><span class="math display">\[S_{\mathrm{ger}} = -\oint \frac{\delta Q}{T} \ge 0\]</span></p>
+<p>A <em>geração de entropia</em> é uma medida do qual desigual é a desigualdade de Clausius. Processos e ciclos totalmente reversíveis não geram entropia.</p>
+<p>O aumento da potência gerada por usinas de vapor e gás e motores de combustão interna é uma história de minimização de geração de entropia <span class="citation">(<a href="#ref-bib:bejan" role="doc-biblioref">BEJAN, 2006</a>)</span>; a crise de energia e de petróleo da década de 1970 mostrou que a energia é escassa e que tem <em>qualidade</em>, devendo ser aproveitada da melhor forma possível, sem perdas <span class="citation">(<a href="#ref-bib:Souza1980" role="doc-biblioref">SOUZA, 1980</a>)</span>.</p>
+<p>Portanto, nenhuma análise de engenharia está completa sem uma <em>Análise de Segunda Lei</em>: determinar quais processos geram mais entropia, i.e., onde a variação da <em>propriedade termodinâmica</em> chamada entropia não pode ser explicada apenas pela transferência de calor, e estes são os processos por onde a otimização deve começar.</p>
+<p>Na Análise de Segunda Lei de motores de combustão interna, por exemplo, um resultado comum é o processo de exaustão concentra a maior parte da geração de entropia: os gases se expandem no tempo motor, mas por restrições de volume do motor eles não conseguem se expandir até a pressão atmosférica. Logo, gases pressurizados são simplesmente descarregados.</p>
+<p>Duas soluções são comuns:</p>
+<ol style="list-style-type: decimal">
+<li>Colocar uma turbina no sistema de escape, de maneira a aproveitar essa pressão (motores turboalimentados)</li>
+<li>Restringir a quantidade de fluido que entra, de maneira a conseguir abaixar mais a pressão na expansão e <em>aproveitá-la</em> melhor.</li>
+</ol>
+
+</div>
+</div>
+<h3>Referências<a href="referências.html#referências" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body" entry-spacing="1">
+<div id="ref-bib:bejan" class="csl-entry">
+BEJAN, A. <strong>Advanced Engineering Thermodynamics</strong>. 3. ed. Hoboken: John Wiley &amp; Sons, Inc., 2006.
+</div>
+<div id="ref-bib:Souza1980" class="csl-entry">
+SOUZA, Z. DE. <strong><span>Elementos de M<span>á</span>quinas T<span>é</span>rmicas</span></strong>. Rio de Janeiro: Campus, 1980.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="primlei.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ciclos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/fabiofortkamp/fet/edit/main/02-seglei.Rmd",
+"text": "Editar"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/fabiofortkamp/fet/blob/main/02-seglei.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

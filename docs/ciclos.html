@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 12 Trocadores de Calor | Fundamentos de Engenharia Térmica</title>
+  <title>Capítulo 4 Processos e Ciclos Termodinâmicos | Fundamentos de Engenharia Térmica</title>
   <meta name="description" content="Coleção de ensaios de treino para concursos para Professor do Magistério de Ensino Superior na área de Engenharia Térmica" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 12 Trocadores de Calor | Fundamentos de Engenharia Térmica" />
+  <meta property="og:title" content="Capítulo 4 Processos e Ciclos Termodinâmicos | Fundamentos de Engenharia Térmica" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Coleção de ensaios de treino para concursos para Professor do Magistério de Ensino Superior na área de Engenharia Térmica" />
   <meta name="github-repo" content="fabiofortkamp/fet" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 12 Trocadores de Calor | Fundamentos de Engenharia Térmica" />
+  <meta name="twitter:title" content="Capítulo 4 Processos e Ciclos Termodinâmicos | Fundamentos de Engenharia Térmica" />
   
   <meta name="twitter:description" content="Coleção de ensaios de treino para concursos para Professor do Magistério de Ensino Superior na área de Engenharia Térmica" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="transferência-de-calor-com-reação-química.html"/>
-<link rel="next" href="referências.html"/>
+<link rel="prev" href="seglei.html"/>
+<link rel="next" href="termodinâmica-de-misturas.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -214,18 +214,53 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="trocadores-de-calor" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">Capítulo 12</span> Trocadores de Calor<a href="trocadores-de-calor.html#trocadores-de-calor" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We have finished a nice book.</p>
+<div id="ciclos" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Processos e Ciclos Termodinâmicos<a href="ciclos.html#ciclos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>Processos e Ciclos Termodinâmicos</em> são maneiras que a Engenharia encontrou para promover transferências de energia entre dois sistemas. A água de um poço precisa de energia para escoar até uma caixa d’água, então ela passa por um <em>processo de compressão</em>, consumindo trabalho no meio, para ganhar energia suficiente e escoar.</p>
+<p>Mais precisamente falando, um processo termodinâmica é uma mudança de estado de um sistema, i.e. pegamos uma porção de massa ou uma região delimitada do espaço e mudamos <em>alguma</em> propriedade sua. No exemplo acima, uma bomba faz força sobre água, que reage aumentando a pressão para suportar essa tensão normal maior. Uma propriedade mudou, logo o estado mudou, logo um processo aconteceu.</p>
+<p>Um ciclo é um processo especial - ou, talvez melhor dizendo, uma sequência de processos, o que não deixa de ser um processo também - que faz o sistema retornar ao estado inicial. No exemplo acima, após pressurizar (e inevitalmente esquentar) a água, fazemos ela escoar por uma série de tubulações, onde ela perde pressão e calor para o ambiente, de maneira que volta para o reservatório de alimentação da bomba <em>exatamente na mesma pressão e temperatura</em> em que antes havia entrado.</p>
+<p>A Engenharia Térmica põe muita ênfase no estudo de ciclos, porque eles podem funcionar indefinidamente sem alimentação de fluido de trabalho. No exemplo acima, você pode fazer água escoar por canos e, se dimensionar o sistema com o tamanho apropriado e garantir que não há reações de oxidação, ele pode funcionar até o fim dos tempos com a mesma quantidade de água (desde que a bomba continue recebendo trabalho para funcionar), e da mesma maneira. Se a bomba é a mesma e água na entrada está na mesma condição, então a saída não vai ficar cada vez mais quente - vai permanecer no mesmo estado. Esta <em>estabilidade</em> de operação é bastante interessante.</p>
+<div id="estudo-de-ciclos-e-processos" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Estudo de ciclos e processos<a href="ciclos.html#estudo-de-ciclos-e-processos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pedagogicamente, costumamos estudar dois critérios de classificação de ciclos:</p>
+<ol style="list-style-type: decimal">
+<li>Quanto à fase do fluido de trabalho: ciclos a gás ou a vapor condensáveis</li>
+<li>Quanto ao sentido do trabalho: ciclos de potência (entregam trabalho líquido para a vizinhança) ou de refrigeração (recebem trabalho da vizinhança).</li>
+</ol>
+<p>Cada arquitetura de ciclo, seja qual for o fluido ou a finalidade, vai ser composto de algumas classes de processos especiais: processos isotérmicos, isentrópicos, isobáricos, isovolumétricos, iso-entálpicos.</p>
+</div>
+<div id="por-que-tantos-ciclos-diferentes" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Por que tantos ciclos diferentes?<a href="ciclos.html#por-que-tantos-ciclos-diferentes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Aliás, por que falar de <em>arquitetura</em> de ciclos, e por que existem tantas opções.</p>
+<p>Processos e ciclos termodinâmicos obedecem às leis da termodinâmica (veja Capítulos <a href="primlei.html#primlei">2</a> e <a href="seglei.html#seglei">3</a>). A Segunda Lei, em particular, impõe o limite de que nenhum ciclo, seja qual for sua arquitetura, não vai consumir menos trabalho (ou gerar mais trabalho) que um ciclo <em>totalmente reversível</em>, isto é, que pode ser executado em qualquer sentido (gerando ou consumindo trabalho) sem nenhuma diferença para a vizinhaça.</p>
+<p>Para isto ser possível, todo processo de transferência de calor com a vizinhaça precisa ser <em>isotérmico</em>, com uma diferença de temperatura infinitesimal entre fluido de trabalho e fonte; caso contrário, a fonte quente transfere calor para o fluido e não vai receber calor do mesmo, mesmo que ele escoe em sentido contrário. O fato de que o calor sempre escoa no sentido contra o gradiente de temperatura, e a Segunda Lei da Termodâmica em geral, são comprovados experimentalmente “à exaustão” <span class="citation">(<a href="#ref-bib:callen" role="doc-biblioref">CALLEN, 1985</a>)</span>.</p>
+<p>É aqui que a Engenharia se separa da Física. Para garantir a isotermia na transferência de calor, precisamos de processos infinitamente lentos: você transfere uma quantidade infinitesimal de calor para o fluido, espera ele se expandir para estabilizar, e então repete, mas essa quantidade de calor transferida passo a passo nunca pode ser muito grande, caso contrário já há uma diferença de temperaturas e o processo não é mais reversível. Um processo que demora um tempo infinito para acontecer não é nada <em>prático</em>.</p>
+<p>Basicamente, os diferentes tipos de ciclos buscam diferentes maneiras de transferir calor que sejam mais fáceis (mais baratas para construir ou operar), e então fazer ajustes com base nisso.</p>
+</div>
+<div id="exemplos-de-ciclos" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Exemplos de ciclos<a href="ciclos.html#exemplos-de-ciclos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="métricas-de-desempenho-de-ciclos" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Métricas de desempenho de ciclos<a href="ciclos.html#métricas-de-desempenho-de-ciclos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="relevância-ambiental-dos-fluidos" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Relevância ambiental dos fluidos<a href="ciclos.html#relevância-ambiental-dos-fluidos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
+</div>
+</div>
+<h3>Referências<a href="referências.html#referências" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body" entry-spacing="1">
+<div id="ref-bib:callen" class="csl-entry">
+CALLEN, H. B. <strong>Thermodynamics and an Introduction to Thermostatistics</strong>. 2. ed. [s.l.] John Wiley; Sons, 1985.
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="transferência-de-calor-com-reação-química.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seglei.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="termodinâmica-de-misturas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -256,7 +291,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/fabiofortkamp/fet/edit/main/11-trocadores.Rmd",
+"link": "https://github.com/fabiofortkamp/fet/edit/main/03-ciclos.Rmd",
 "text": "Editar"
 },
 "history": {
@@ -264,7 +299,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/fabiofortkamp/fet/blob/main/11-trocadores.Rmd",
+"link": "https://github.com/fabiofortkamp/fet/blob/main/03-ciclos.Rmd",
 "text": null
 },
 "download": null,

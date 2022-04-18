@@ -23,7 +23,7 @@
 <meta name="author" content="Fábio P. Fortkamp" />
 
 
-<meta name="date" content="2022-04-11" />
+<meta name="date" content="2022-04-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="segunda-lei-da-termodinâmica.html"/>
+<link rel="next" href="seglei.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -156,7 +156,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Fund. Eng. Térmica</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução<span></span></a></li>
@@ -165,10 +165,17 @@ div.csl-indent {
 <li class="chapter" data-level="2.1" data-path="primlei.html"><a href="primlei.html#primeira-lei-assunto-básico"><i class="fa fa-check"></i><b>2.1</b> Primeira Lei: assunto básico?<span></span></a></li>
 <li class="chapter" data-level="2.2" data-path="primlei.html"><a href="primlei.html#o-que-entra-na-energia-total-de-um-sistema"><i class="fa fa-check"></i><b>2.2</b> O que entra na energia total de um sistema<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="segunda-lei-da-termodinâmica.html"><a href="segunda-lei-da-termodinâmica.html"><i class="fa fa-check"></i><b>3</b> Segunda Lei da Termodinâmica<span></span></a></li>
-<li class="chapter" data-level="4" data-path="processos-e-ciclos-termodinâmicos.html"><a href="processos-e-ciclos-termodinâmicos.html"><i class="fa fa-check"></i><b>4</b> Processos e Ciclos Termodinâmicos<span></span></a>
+<li class="chapter" data-level="3" data-path="seglei.html"><a href="seglei.html"><i class="fa fa-check"></i><b>3</b> Segunda Lei da Termodinâmica<span></span></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="processos-e-ciclos-termodinâmicos.html"><a href="processos-e-ciclos-termodinâmicos.html#math-example"><i class="fa fa-check"></i><b>4.1</b> math example<span></span></a></li>
+<li class="chapter" data-level="3.1" data-path="seglei.html"><a href="seglei.html#geração-de-entropia-e-irreversibilidades"><i class="fa fa-check"></i><b>3.1</b> Geração de entropia e irreversibilidades<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ciclos.html"><a href="ciclos.html"><i class="fa fa-check"></i><b>4</b> Processos e Ciclos Termodinâmicos<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ciclos.html"><a href="ciclos.html#estudo-de-ciclos-e-processos"><i class="fa fa-check"></i><b>4.1</b> Estudo de ciclos e processos<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="ciclos.html"><a href="ciclos.html#por-que-tantos-ciclos-diferentes"><i class="fa fa-check"></i><b>4.2</b> Por que tantos ciclos diferentes?<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="ciclos.html"><a href="ciclos.html#exemplos-de-ciclos"><i class="fa fa-check"></i><b>4.3</b> Exemplos de ciclos<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="ciclos.html"><a href="ciclos.html#métricas-de-desempenho-de-ciclos"><i class="fa fa-check"></i><b>4.4</b> Métricas de desempenho de ciclos<span></span></a></li>
+<li class="chapter" data-level="4.5" data-path="ciclos.html"><a href="ciclos.html#relevância-ambiental-dos-fluidos"><i class="fa fa-check"></i><b>4.5</b> Relevância ambiental dos fluidos<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="termodinâmica-de-misturas.html"><a href="termodinâmica-de-misturas.html"><i class="fa fa-check"></i><b>5</b> Termodinâmica de Misturas<span></span></a>
 <ul>
@@ -214,16 +221,17 @@ div.csl-indent {
 <p>A <em>Primeira Lei da Termodinâmica</em> é um destes princípios fundamentais, que expressa uma lei de conservação de energia. Na sua forma mais básica, ela é aplicada a um sistema fechado, i.e. uma porção de massa fixa - o caso mais típico de análise de sistemas fechados é o gás que fica aprisionado em motores de combustão interna quando todas as válvulas estão fechadas. Chamamos de <span class="math inline">\(E\)</span> a <em>energia total</em> deste sistema. A energia é uma capacidade de agir sobre a vizinhança. O gás dos motores, quando pressurizado e quente, pode mover o pistão com mais força do que quando frio e difuso, logo é mais “energético”. Um vapor d’água que escoa por uma turbina gera muito mais potência que geraria água líquida escoando na mesma temperatura e vazão, assim também dizemos que o vapor é mais energético que o líquido na mesma temperatura.</p>
 <p>O nosso sistema está então em um <em>estado termodinâmico</em>, que vamos chamar de “1”, caracterizado por um conjunto de propriedades: temperatura, pressão, volume, e inclusive energia. Então, fazemos o sistema passar por um <em>processo termodinâmico</em>, em que <em>pelo menos uma propriedade muda</em>. Um exemplo de processo é aumentar a pressão do gás movimentando o pistão, ou aquecê-lo com uma chama. Vamos considerar que o sistema recebe uma quantidade de calor <span class="math inline">\(Q\)</span> a partir de uma fonte quente e realiza uma quantidade de trabalho <span class="math inline">\(W\)</span> sobre a vizinhança, exercendo uma força sobre uma certa distância. O novo estado é chamado de “2”.</p>
 <p>A Primeira Lei da Termodinâmica pode ser expressa então para esse caso como:</p>
-<p><span class="math display">\[
-E_2 - E_1 = Q - W
-\]</span></p>
+<p><span class="math display" id="eq:primlei">\[\begin{equation}
+  E_2 - E_1 = Q - W
+  \tag{2.1}
+\end{equation}\]</span></p>
 <p>A transferência de calor é sempre associada a uma diferença de temperatura, e pode ser calculada e medida usando os conceitos de condução (Capítulo <a href="conducao.html#conducao">7</a>), convecção (Capítulo <a href="conveccao.html#conveccao">8</a>) e radiação (Capítulo <a href="radiacao.html#radiacao">9</a>).</p>
 <p>Já o trabalho pode ser medido usando Mecânica e Eletromagnetismo - que, do ponto de vista pedagógico, geralmente <em>antecede</em> cursos de Engenharia Térmica - como o trabalho de um pistão, de um eixo rotativo ou de movimentar uma corrente em uma resistência elétrica.</p>
 <p>A Primeira Lei da Termodinâmica estabelece que estes dois mecanismos alteram a energia total de um sistema. Essa noção de uma <em>equivalência mecânica do calor</em> foi um passo importante na Termodinâmica <span class="citation">(<a href="#ref-bib:callen" role="doc-biblioref">CALLEN, 1985</a>)</span>.</p>
 <div id="primeira-lei-assunto-básico" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Primeira Lei: assunto básico?<a href="primlei.html#primeira-lei-assunto-básico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Atualmente eu ministro 5 cursos na área de Engenharia Térmica, e geralmente logo as primeiras aulas são voltadas para a aplicação da Primeira Lei aos sistema de interesse (como refrigeradores, motores de combustão interna ou usinas termelétricas). Na minha experiência como professor, a Primeira Lei é de fácil entendimento e bastante voltada à solução de problemas práticos de engenharia <span class="citation">(<a href="#ref-bib:bejan" role="doc-biblioref">BEJAN, 2006</a>)</span>, como calcular a potência de um ciclo ou a quantidade de calor necessária para um processo de aquecimento.</p>
-<p>Isso não quer dizer, porém, que este é um assunto “básico demais”. Na sua análise de um refrigerador magnético, uma tecnologia bastante inovadora, <span class="citation">NAKASHIMA et al. (<a href="#ref-bib:nakashima22" role="doc-biblioref">2022</a>)</span> começaram a análise simplesmente aplicando a Primeira Lei da Termodinâmica e indentificando as trocas de calor e trabalho, que então são modeladas separadamente. A conservação da energia conforme expressa pela Primeira Lei também é um critério básico de convergência na simulação numérica de sistemas complexos.</p>
+<p>Isso não quer dizer, porém, que este é um assunto “básico demais”. Na sua análise de um refrigerador magnético, uma tecnologia bastante inovadora, <span class="citation">NAKASHIMA et al. (<a href="#ref-bib:nakashima22" role="doc-biblioref">2022</a>)</span> começaram a análise simplesmente aplicando a Primeira Lei da Termodinâmica e identificando as trocas de calor e trabalho, que então são modeladas separadamente. A conservação da energia conforme expressa pela Primeira Lei também é um critério básico de convergência na simulação numérica de sistemas complexos; a simulação só pode estar finalizando quando a solução é tal que pelo menos a energia se conserva.</p>
 </div>
 <div id="o-que-entra-na-energia-total-de-um-sistema" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> O que entra na energia total de um sistema<a href="primlei.html#o-que-entra-na-energia-total-de-um-sistema" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -272,7 +280,7 @@ WANG, Y. et al. <a href="https://doi.org/10.1016/j.applthermaleng.2019.113901">P
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="segunda-lei-da-termodinâmica.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seglei.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -303,7 +311,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-primlei.Rmd",
+"link": "https://github.com/fabiofortkamp/fet/edit/main/01-primlei.Rmd",
 "text": "Editar"
 },
 "history": {
@@ -311,10 +319,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": null,
+"link": "https://github.com/fabiofortkamp/fet/blob/main/01-primlei.Rmd",
 "text": null
 },
-"download": ["fet.pdf", "fet.epub"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null

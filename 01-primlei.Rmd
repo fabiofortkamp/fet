@@ -26,7 +26,7 @@ A Primeira Lei da Termodinâmica estabelece que estes dois mecanismos alteram a 
 
 Atualmente eu ministro 5 cursos na área de Engenharia Térmica, e geralmente logo as primeiras aulas são voltadas para a aplicação da Primeira Lei aos sistema de interesse (como refrigeradores, motores de combustão interna ou usinas termelétricas). Na minha experiência como professor, a Primeira Lei é de fácil entendimento e bastante voltada à solução de problemas práticos de engenharia [@bib:bejan], como calcular a potência de um ciclo ou a quantidade de calor necessária para um processo de aquecimento.
 
-Isso não quer dizer, porém, que este é um assunto "básico demais". Na sua análise de um refrigerador magnético, uma tecnologia bastante inovadora, @bib:nakashima22 começaram a análise simplesmente aplicando a Primeira Lei da Termodinâmica e indentificando as trocas de calor e trabalho, que então são modeladas separadamente. A conservação da energia conforme expressa pela Primeira Lei também é um critério básico de convergência na simulação numérica de sistemas complexos.
+Isso não quer dizer, porém, que este é um assunto "básico demais". Na sua análise de um refrigerador magnético, uma tecnologia bastante inovadora, @bib:nakashima22 começaram a análise simplesmente aplicando a Primeira Lei da Termodinâmica e identificando as trocas de calor e trabalho, que então são modeladas separadamente. A conservação da energia conforme expressa pela Primeira Lei também é um critério básico de convergência na simulação numérica de sistemas complexos; a simulação só pode estar finalizando quando a solução é tal que pelo menos a energia se conserva.
 
 ## O que entra na energia total de um sistema
 

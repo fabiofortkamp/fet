@@ -1,6 +1,8 @@
 book_filename: "fet"
 delete_merged_file: true
 output_dir: "docs"
+edit: https://github.com/fabiofortkamp/fet/edit/main/%s
+view: https://github.com/fabiofortkamp/fet/blob/main/%s
 
 language:
   label:

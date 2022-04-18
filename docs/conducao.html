@@ -23,7 +23,7 @@
 <meta name="author" content="Fábio P. Fortkamp" />
 
 
-<meta name="date" content="2022-04-11" />
+<meta name="date" content="2022-04-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,7 +156,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Fund. Eng. Térmica</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução<span></span></a></li>
@@ -165,10 +165,17 @@ div.csl-indent {
 <li class="chapter" data-level="2.1" data-path="primlei.html"><a href="primlei.html#primeira-lei-assunto-básico"><i class="fa fa-check"></i><b>2.1</b> Primeira Lei: assunto básico?<span></span></a></li>
 <li class="chapter" data-level="2.2" data-path="primlei.html"><a href="primlei.html#o-que-entra-na-energia-total-de-um-sistema"><i class="fa fa-check"></i><b>2.2</b> O que entra na energia total de um sistema<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="segunda-lei-da-termodinâmica.html"><a href="segunda-lei-da-termodinâmica.html"><i class="fa fa-check"></i><b>3</b> Segunda Lei da Termodinâmica<span></span></a></li>
-<li class="chapter" data-level="4" data-path="processos-e-ciclos-termodinâmicos.html"><a href="processos-e-ciclos-termodinâmicos.html"><i class="fa fa-check"></i><b>4</b> Processos e Ciclos Termodinâmicos<span></span></a>
+<li class="chapter" data-level="3" data-path="seglei.html"><a href="seglei.html"><i class="fa fa-check"></i><b>3</b> Segunda Lei da Termodinâmica<span></span></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="processos-e-ciclos-termodinâmicos.html"><a href="processos-e-ciclos-termodinâmicos.html#math-example"><i class="fa fa-check"></i><b>4.1</b> math example<span></span></a></li>
+<li class="chapter" data-level="3.1" data-path="seglei.html"><a href="seglei.html#geração-de-entropia-e-irreversibilidades"><i class="fa fa-check"></i><b>3.1</b> Geração de entropia e irreversibilidades<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ciclos.html"><a href="ciclos.html"><i class="fa fa-check"></i><b>4</b> Processos e Ciclos Termodinâmicos<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ciclos.html"><a href="ciclos.html#estudo-de-ciclos-e-processos"><i class="fa fa-check"></i><b>4.1</b> Estudo de ciclos e processos<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="ciclos.html"><a href="ciclos.html#por-que-tantos-ciclos-diferentes"><i class="fa fa-check"></i><b>4.2</b> Por que tantos ciclos diferentes?<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="ciclos.html"><a href="ciclos.html#exemplos-de-ciclos"><i class="fa fa-check"></i><b>4.3</b> Exemplos de ciclos<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="ciclos.html"><a href="ciclos.html#métricas-de-desempenho-de-ciclos"><i class="fa fa-check"></i><b>4.4</b> Métricas de desempenho de ciclos<span></span></a></li>
+<li class="chapter" data-level="4.5" data-path="ciclos.html"><a href="ciclos.html#relevância-ambiental-dos-fluidos"><i class="fa fa-check"></i><b>4.5</b> Relevância ambiental dos fluidos<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="termodinâmica-de-misturas.html"><a href="termodinâmica-de-misturas.html"><i class="fa fa-check"></i><b>5</b> Termodinâmica de Misturas<span></span></a>
 <ul>
@@ -210,19 +217,22 @@ div.csl-indent {
 <div id="conducao" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Capítulo 7</span> Transferência de Calor por Condução<a href="conducao.html#conducao" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>A Transferência de Calor por Condução é um modo microscópico de transferência de energia, sem movimento de matéria. Sentimo-la quando pegamos no cabo metálico de uma panela que está ao fogo; o cabo, originalmente frio, ficou quente, mesmo estando fisicamente longe da fonte de calor. Em fluidos, ela está associada à colisões e movimentos moleculares, enquanto que em sólidos a condução de calor é melhor explicada por vibrações da rede cristalina dos sólidos <span class="citation">(<a href="#ref-bib:cengel-heat" role="doc-biblioref">ÇENGEL; GHAJAR, 2012</a>)</span>.</p>
-<p>O que influencia a condução? A espessura por onde o calor é conduzido é importante: no inverno, tentamos nos isolar termicamente adicionando mais camadas de roupas grossas. A área de transferência de calor também é importante: os arames em um condensador de refrigerador não servem para escoar refrigerante, mas para multiplicar a área de contato com o ar. A diferença de temperaturas é o que rege a transferência de calor (se uma transferência de energia não depende da diferença de temperaturas, então ela é trabalho - conferir Capítulo @ref{#primeli}). E experimentalmente podemos observar que alguns materiais conduzem melhor calor que outros - se o cabo do exemplo do parágrafo anterior fosse de plástico, dificilmente sentiríamos a energia fluindo.</p>
-<p>Ao analisar problemas térmicas, frequentemente a primeira ferramenta do engenheiro ou engenheira é aplicar a Primeira Lei da Termodinâmica (Capítulo @ref{#primlei}). Os termos de calor nesse balanço dependem da temperatura, mas a Termodinâmica sozinha não diz nada de como é essa dependência, e aí entram os conceitos de transferência de calor. A lei constitutiva de condução de calor é a <strong>Lei de Fourier</strong>: em um ponto em um meio isotrópico, o fluxo de calor é:</p>
-<p><span class="math display">\[
-\vec{q&#39;&#39;} = -k \nabla T
-\]</span></p>
+<p>O que influencia a condução? A espessura por onde o calor é conduzido é importante: no inverno, tentamos nos isolar termicamente adicionando mais camadas de roupas grossas. A área de transferência de calor também é importante: os arames em um condensador de refrigerador não servem para escoar refrigerante, mas para multiplicar a área de contato com o ar. A diferença de temperaturas é o que rege a transferência de calor (se uma transferência de energia não depende da diferença de temperaturas, então ela é trabalho - conferir Capítulo <a href="primlei.html#primlei">2</a>). E experimentalmente podemos observar que alguns materiais conduzem melhor calor que outros - se o cabo do exemplo do parágrafo anterior fosse de plástico, dificilmente sentiríamos a energia fluindo.</p>
+<p>Ao analisar problemas térmicas, frequentemente a primeira ferramenta do engenheiro ou engenheira é aplicar a Primeira Lei da Termodinâmica (Capítulo <a href="primlei.html#primlei">2</a>). Os termos de calor nesse balanço dependem da temperatura, mas a Termodinâmica sozinha não diz nada de como é essa dependência, e aí entram os conceitos de transferência de calor. A lei constitutiva de condução de calor é a <strong>Lei de Fourier</strong>: em um ponto em um meio isotrópico, o fluxo de calor é:</p>
+<p><span class="math display" id="eq:fourier">\[\begin{equation}
+  \vec{q&#39;&#39;} = -k \nabla T
+  \tag{7.1}
+\end{equation}\]</span></p>
 <p>e a taxa total de transferência de calor que atravessa uma superfície de área <span class="math inline">\(A\)</span> é:</p>
-<p><span class="math display">\[
-\dot{Q} = \int_A \vec{q&#39;&#39;} \cdot \hat{n} \mathrm{d} \sigma
-\]</span></p>
+<p><span class="math display" id="eq:taxa">\[\begin{equation}
+  \dot{Q} = \int_A \vec{q&#39;&#39;} \cdot \hat{n} \mathrm{d} \sigma
+  \tag{7.2}
+\end{equation}\]</span></p>
 <p>Na Lei de Fourier, a condutividade térmica <span class="math inline">\(k\)</span> é um coeficiente escalar de proporcionalidade entre o fluxo de calor e o gradiente de tempreatura. Na integral acima, <span class="math inline">\(\hat{n}\)</span> é o vetor normal apontando para fora da superfície.</p>
 <div id="condução-de-calor-e-segunda-lei-da-termodinâmica" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Condução de Calor e Segunda Lei da Termodinâmica<a href="conducao.html#condução-de-calor-e-segunda-lei-da-termodinâmica" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>[[20220214171951 Why the thermal conductivity must be positive]]</p>
+<p>Na Eq. <a href="conducao.html#eq:fourier">(7.1)</a>, a condutividade deve ser sempre positiva para que o calor flua contra o gradiente de temperaturas, isto é, de uma região conte para uma região fria. Um valor <span class="math inline">\(k = 0\)</span> significa simplesmente que o material é um isolante perfeito, e alguns materiais têm mesmo condutividades muito pequenas. Mas o que aconteceria se <span class="math inline">\(k &lt; 0\)</span>?</p>
+<p>Considere um sistema que está originalmente frio, como uma porção de alimentos, que foi resfriada possivelmente pela ação de um sistema de refrigeração. Vamos então pegar esse alimento e separá-lo do ambiente quente por paredes feitas do material com <span class="math inline">\(k &lt; 0\)</span>. O que vai acontecer: o calor vai fluir, pela Lei de Fourier, do ambiente frio para o ambiente quente. Vamos dizer que o ambiente frio é mantido a temperatura constante porque paralelamente há uma brecha em uma das paredes que deixa entrar calor. O ambiente frio está funcionando como um sistema fechado em ciclos (já que ele é aquecido pela brecha de calor e resfriado pelo material especial, voltando ao ponto de partida indefinidamente - verja Capítulo <a href="ciclos.html#ciclos">4</a>, que transfere calor para um sistema quente, sem nenhuma adição de trabalho - o que viola o Enunciado de Clausius da Segunda Lei da Termodinâmica (Capítulo <a href="seglei.html#seglei">3</a>). Logo, esse material “especial” é impossível!</p>
 <p>Fourier’s Law is simply an experimental linearized relation between temperatures and heat transfer rates; these should be input in an energy conservation equation, the First Law of Thermodynamics. Assuming no macroscopic flow, no work transfer, an incompressible medium with constant specific heat, allowing for temperature dependence on the thermal conductivity and an uniform heat generation rate (the result of nuclear or chemical reactions or electrical dissipation), we arrive at the so-called <em>heat conduction equation</em>, here presented in cartesian coordinates for a more straight-forward analysis:</p>
 <p><span class="math display">\[
 \rho c_p \frac{\partial T}{\partial t} = \frac{\partial}{\partial x} \left( k \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y} \left( k \frac{\partial T}{\partial y}\right) +  \frac{\partial}{\partial z} \left( k \frac{\partial T}{\partial z}\right) + \dot{q}&#39;&#39;&#39;
@@ -296,7 +306,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-conducao.Rmd",
+"link": "https://github.com/fabiofortkamp/fet/edit/main/06-conducao.Rmd",
 "text": "Editar"
 },
 "history": {
@@ -304,10 +314,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": null,
+"link": "https://github.com/fabiofortkamp/fet/blob/main/06-conducao.Rmd",
 "text": null
 },
-"download": ["fet.pdf", "fet.epub"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null

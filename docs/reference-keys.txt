@@ -13,10 +13,10 @@ por-que-tantos-ciclos-diferentes
 exemplos-de-ciclos
 métricas-de-desempenho-de-ciclos
 relevância-ambiental-dos-fluidos
-termodinâmica-de-misturas
+misturas
 example-one
 example-two
-termodinâmica-química
+quimica
 conducao
 condução-de-calor-e-segunda-lei-da-termodinâmica
 equação-da-difusão-térmica

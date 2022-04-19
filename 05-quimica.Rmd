@@ -1,3 +1,10 @@
-# Termodinâmica Química
+# Termodinâmica Química {#quimica}
 
-We have finished a nice book.
+Diversos sistemas de engenharia funcionam à base de reações químicas, mas talvez o exemplo mais familiar para os estudantes são as reações de *combustão* que acontecem em Máquinas Térmicas: motores de combustão interna, turbinas a vapor e turbinas a gás. O desempenho dos motores é bastante dependente de como a combustão acontece [@bib:Heywood1988], em termos de taxas, variações de temperatura e pressão e condições inicial e final de equilíbrio, e essas ferramentas são fornecidas pelo estudo da *Termodinâmica Química* (ou Termoquímica): relações termodinâmicas envolvendo sistemas reativos.
+
+As principais aplicações de reações químicas acontecem geralmente com *gases*: vapores de hidrocarbonetos, oxigênio, monóxido e dióxido de carbono, nitrogênio e seus óxidos, vapor d'água para citar os principais. Mesmo quando a reação inicia com líquido (como a gasolina e o diesel), o líquido se vaporiza antes de entrar em combustão (a gasolina pela energia entregue pela vela do motor e o diesel pelo ar quente comprimido antes da injeção). A hipótese de *gases ideais* é bastante adequada nessas situações analisadas [@bib:Heywood1988]; mesmo que o vapor d'água, por exemplo, costume ser um contra-exemplo de vapor que não pode ser considerado como gás ideal, a sua pressão parcial (cf. Cap. \@ref(misturas)) em sistemas de combustão vai estar bem abaixo da sua pressão crítica, validando a hipótese de gás ideal [@bib:cengel].
+
+
+
+
+

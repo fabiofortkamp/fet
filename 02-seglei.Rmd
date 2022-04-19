@@ -14,7 +14,7 @@ Talvez surpreendentemente, essa pergunta está ligada a um conceito que parece n
 
 Assim como no caso de refrigeradores, baseamo-nos em observações experimentais para afirmar que não: é impossível construir uma máquina térmica que funcione em ciclos com um sistema fechado, *gere* potência para fora do sistema e troque calor com apenas um reservatório térmico. Esse fato é conhecido como o **Enunciado de Kelvin-Planck da Segunda Lei da Termodinâmica**.
 
-A Segunda Lei não é uma equação, mas uma desigualdade: ela impõe limites sobre a eficiência de máquinas térmicas e refrigeradores. Em termos pedagógicos, isso parece fazer a Segunda Lei não ser tão priorizada quanto a Primeira Lei (ver Cap. \@ref(#primlei)), com suas equações relacionando energia, calor e trabalho que podem ser *resolvidas* para alguma grandeza de interesse [@bib:bejan].
+A Segunda Lei não é uma equação, mas uma desigualdade: ela impõe limites sobre a eficiência de máquinas térmicas e refrigeradores. Em termos pedagógicos, isso parece fazer a Segunda Lei não ser tão priorizada quanto a Primeira Lei (ver Cap. \@ref(primlei)), com suas equações relacionando energia, calor e trabalho que podem ser *resolvidas* para alguma grandeza de interesse [@bib:bejan].
 
 Os trabalhos de Carnot respondem às perguntas colocadas neste texto: a chave para maximizar a eficiência é garantir processos e ciclos *reversíveis*, isto é, que possam ser executados em qualquer sentido sem diferenças para o sistema e a vizinhança. Em termos práticos, isto requereria trocadores de calor com área infinita, de maneira que a fonte e o fluido de trabalho estejam sempre em equilíbrio térmico.
 

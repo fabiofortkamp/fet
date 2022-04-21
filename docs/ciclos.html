@@ -23,7 +23,7 @@
 <meta name="author" content="Fábio P. Fortkamp" />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,8 +174,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1" data-path="ciclos.html"><a href="ciclos.html#estudo-de-ciclos-e-processos"><i class="fa fa-check"></i><b>4.1</b> Estudo de ciclos e processos<span></span></a></li>
 <li class="chapter" data-level="4.2" data-path="ciclos.html"><a href="ciclos.html#por-que-tantos-ciclos-diferentes"><i class="fa fa-check"></i><b>4.2</b> Por que tantos ciclos diferentes?<span></span></a></li>
 <li class="chapter" data-level="4.3" data-path="ciclos.html"><a href="ciclos.html#exemplos-de-ciclos"><i class="fa fa-check"></i><b>4.3</b> Exemplos de ciclos<span></span></a></li>
-<li class="chapter" data-level="4.4" data-path="ciclos.html"><a href="ciclos.html#métricas-de-desempenho-de-ciclos"><i class="fa fa-check"></i><b>4.4</b> Métricas de desempenho de ciclos<span></span></a></li>
-<li class="chapter" data-level="4.5" data-path="ciclos.html"><a href="ciclos.html#relevância-ambiental-dos-fluidos"><i class="fa fa-check"></i><b>4.5</b> Relevância ambiental dos fluidos<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="ciclos.html"><a href="ciclos.html#relevância-ambiental-dos-fluidos"><i class="fa fa-check"></i><b>4.4</b> Relevância ambiental dos fluidos<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="misturas.html"><a href="misturas.html"><i class="fa fa-check"></i><b>5</b> Termodinâmica de Misturas<span></span></a>
 <ul>
@@ -216,8 +215,8 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="ciclos" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Capítulo 4</span> Processos e Ciclos Termodinâmicos<a href="ciclos.html#ciclos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><em>Processos e Ciclos Termodinâmicos</em> são maneiras que a Engenharia encontrou para promover transferências de energia entre dois sistemas. A água de um poço precisa de energia para escoar até uma caixa d’água, então ela passa por um <em>processo de compressão</em>, consumindo trabalho no meio, para ganhar energia suficiente e escoar.</p>
-<p>Mais precisamente falando, um processo termodinâmica é uma mudança de estado de um sistema, i.e. pegamos uma porção de massa ou uma região delimitada do espaço e mudamos <em>alguma</em> propriedade sua. No exemplo acima, uma bomba faz força sobre água, que reage aumentando a pressão para suportar essa tensão normal maior. Uma propriedade mudou, logo o estado mudou, logo um processo aconteceu.</p>
+<p><em>Processos e Ciclos Termodinâmicos</em> são maneiras que a Engenharia encontrou para promover transferências de energia entre sistemas. A água de um poço precisa de energia para escoar até uma caixa d’água, então ela passa por um <em>processo de compressão</em>, consumindo trabalho no meio, para ganhar energia suficiente e escoar.</p>
+<p>Mais precisamente falando, um processo termodinâmico é uma mudança de estado de um sistema, i.e. pegamos uma porção de massa ou uma região delimitada do espaço e mudamos <em>alguma</em> propriedade sua. No exemplo acima, uma bomba faz força sobre água, que reage aumentando a pressão para suportar essa tensão normal maior. Uma propriedade mudou, logo o estado mudou, logo um processo aconteceu.</p>
 <p>Um ciclo é um processo especial - ou, talvez melhor dizendo, uma sequência de processos, o que não deixa de ser um processo também - que faz o sistema retornar ao estado inicial. No exemplo acima, após pressurizar (e inevitalmente esquentar) a água, fazemos ela escoar por uma série de tubulações, onde ela perde pressão e calor para o ambiente, de maneira que volta para o reservatório de alimentação da bomba <em>exatamente na mesma pressão e temperatura</em> em que antes havia entrado.</p>
 <p>A Engenharia Térmica põe muita ênfase no estudo de ciclos, porque eles podem funcionar indefinidamente sem alimentação de fluido de trabalho. No exemplo acima, você pode fazer água escoar por canos e, se dimensionar o sistema com o tamanho apropriado e garantir que não há reações de oxidação, ele pode funcionar até o fim dos tempos com a mesma quantidade de água (desde que a bomba continue recebendo trabalho para funcionar), e da mesma maneira. Se a bomba é a mesma e água na entrada está na mesma condição, então a saída não vai ficar cada vez mais quente - vai permanecer no mesmo estado. Esta <em>estabilidade</em> de operação é bastante interessante.</p>
 <div id="estudo-de-ciclos-e-processos" class="section level2 hasAnchor" number="4.1">
@@ -231,20 +230,28 @@ div.csl-indent {
 </div>
 <div id="por-que-tantos-ciclos-diferentes" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Por que tantos ciclos diferentes?<a href="ciclos.html#por-que-tantos-ciclos-diferentes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Aliás, por que falar de <em>arquitetura</em> de ciclos, e por que existem tantas opções.</p>
-<p>Processos e ciclos termodinâmicos obedecem às leis da termodinâmica (veja Capítulos <a href="primlei.html#primlei">2</a> e <a href="seglei.html#seglei">3</a>). A Segunda Lei, em particular, impõe o limite de que nenhum ciclo, seja qual for sua arquitetura, não vai consumir menos trabalho (ou gerar mais trabalho) que um ciclo <em>totalmente reversível</em>, isto é, que pode ser executado em qualquer sentido (gerando ou consumindo trabalho) sem nenhuma diferença para a vizinhaça.</p>
+<p>Aliás, por que falar de <em>arquitetura</em> de ciclos, e por que existem tantas opções?</p>
+<p>Processos e ciclos termodinâmicos obedecem às leis da termodinâmica (veja Capítulos <a href="primlei.html#primlei">2</a> e <a href="seglei.html#seglei">3</a>). A Segunda Lei, em particular, impõe o limite de que nenhum ciclo, seja qual for sua arquitetura, vai consumir menos trabalho (ou gerar mais trabalho) que um ciclo <em>totalmente reversível</em>, isto é, que pode ser executado em qualquer sentido (gerando ou consumindo trabalho) sem nenhuma diferença para a vizinhaça.</p>
 <p>Para isto ser possível, todo processo de transferência de calor com a vizinhaça precisa ser <em>isotérmico</em>, com uma diferença de temperatura infinitesimal entre fluido de trabalho e fonte; caso contrário, a fonte quente transfere calor para o fluido e não vai receber calor do mesmo, mesmo que ele escoe em sentido contrário. O fato de que o calor sempre escoa no sentido contra o gradiente de temperatura, e a Segunda Lei da Termodâmica em geral, são comprovados experimentalmente “à exaustão” <span class="citation">(<a href="#ref-bib:callen" role="doc-biblioref">CALLEN, 1985</a>)</span>.</p>
 <p>É aqui que a Engenharia se separa da Física. Para garantir a isotermia na transferência de calor, precisamos de processos infinitamente lentos: você transfere uma quantidade infinitesimal de calor para o fluido, espera ele se expandir para estabilizar, e então repete, mas essa quantidade de calor transferida passo a passo nunca pode ser muito grande, caso contrário já há uma diferença de temperaturas e o processo não é mais reversível. Um processo que demora um tempo infinito para acontecer não é nada <em>prático</em>.</p>
 <p>Basicamente, os diferentes tipos de ciclos buscam diferentes maneiras de transferir calor que sejam mais fáceis (mais baratas para construir ou operar), e então fazer ajustes com base nisso.</p>
 </div>
 <div id="exemplos-de-ciclos" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Exemplos de ciclos<a href="ciclos.html#exemplos-de-ciclos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Os ciclos de potência são implementados com máquinas térmicas: sistemas que recebem calor de alguma fonte e convertem parte dessa energia em trabalho, rejeitando o restante para o ambiente.</p>
+<p>As máquinas térmicas mais utilizadas no mundo são os motores de combustão interna (MCI) dos automóveis <span class="citation">(<a href="#ref-bib:Taylor1995a" role="doc-biblioref">TAYLOR, 1995</a>)</span>. A característica definidora dos MCI é a sua compacticidade e velocidade (funcionando em milhares de ciclos por minuto); para garantir altas taxas de transferência de calor, a fonte de calor é uma reação de combustão de um hidrocarboneto com ar que acontece em um cilindro com cerca de 1 L de volume. Atualmente temos dois grandes grupos de MCI: os de ignição por faísca (MIF), onde uma vela força o início da combustão de uma mistura de ar e combustível, e os de ignição espontânea (MIE), onde o combustível é injetado no ar puro e não há ação de uma vela. Essa diferença de funcionamento se reflete nos <em>ciclos ideais</em> usados para estudos dos MCI: o Ciclo Otto é o modelo para os MIF, e o Ciclo Misto (uma variação do Ciclo Diesel, não mais usado) o modelo mais MIE. Mas as pesquisas com novos ciclos continuam! Eu ministro uma disciplina de <em>Máquinas Térmicas I</em>, onde estudamos dois novos ciclos chamados de <em>sobre-expansão</em>: o Ciclo Atkinson, bastante usado em carros híbridos, e o Ciclo Miller, usado em carros Turbo. Atualmente, muita pesquisa também de dedica a melhorar o modelo dos ciclos de duas maneiras:</p>
+<ol style="list-style-type: decimal">
+<li>Melhor cálculos das propriedades da mistura ar-combustível</li>
+<li>Inclusão dos efeitos de transferência de calor para o sistema de arrefecimento no sistema de combustão.</li>
+</ol>
+<p>Os MCI geram potências da ordem de kW, mas não são facilmente escalonáveis para potências mais altas. Para geração de energia, precisamos de ciclos baseados em turbinas rotativas, não em êmbolos alternativos com sua alta inércia. O Ciclo Brayton é o ciclo das turbinas a gás.</p>
+<p>Todos esses ciclos a gás acima necessitam comprimir um gás durante uma etapa. O processo de compressão de um gás, com seu alto volume específico, demanda muita potência, e muita atenção têm sido dado na Engenharia para ciclos baseados em materiais sólidos ou líquidos - principalmente quando usado com calor residual como fonte. Os ciclos a gás têm a vantagem de trabalhar em altas temperaturas (resultantes da combustão), mas muitos processos industriais transferem calor a temperaturas da ordem de 200 ºC. Essa temperatura é suficiente para alterar a magnetização de <em>materiais calóricos</em>, o que gera uma força resultante que pode movimentar cargas. Estes ciclos <em>termomagnéticos</em> têm sido foco de bastante estudo. Outra maneira de aproveitar o calor residual é com um Ciclo Rankine Orgânico.</p>
+<p>O Ciclo Rankine é um ciclo com água, que é comprimida na fase líquida e expandida na fase vapor, resultado em altas eficiências. Este é o ciclo usado nas usinas termelétricas (em sua maioria), mas o mesmo ciclo pode ser usado com hidrocarbonetos (em vez de água), capazes de operar em baixas temperaturas mas altas pressões. Estes ciclos Rankine Orgânicos conseguem ainda mais eficiência quando são acionados pelo calor rejeitado de um ciclo Brayton, mais potente porém menos eficiente. A amplitude de temperaturas entre a chama da combustão e o ambiente é aproveitada ao máximo. O aumento da eficiência está ligado ao bom projeto dos trocadores de calor, bom dados experimentais, simulações numéricas de alto nível e uso de aprendizado de máquina.</p>
 </div>
-<div id="métricas-de-desempenho-de-ciclos" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Métricas de desempenho de ciclos<a href="ciclos.html#métricas-de-desempenho-de-ciclos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="relevância-ambiental-dos-fluidos" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Relevância ambiental dos fluidos<a href="ciclos.html#relevância-ambiental-dos-fluidos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="relevância-ambiental-dos-fluidos" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Relevância ambiental dos fluidos<a href="ciclos.html#relevância-ambiental-dos-fluidos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As normas ambientais são os fatores determinantes no projeto e operação de ciclos. Os ciclos inversos ao descrito acima são ciclos de refrigeração, onde um fluido recebe trabalho para variar a sua temperatura. Justamente por necessitar de potência mecânica, que provavelmente vai ser gerada em uma usina termelétrica onde vai haver queima de combustíveis e formação de poluentes, é interessante reduzir a potência consumida. Entretanto, muitas vezes é necessário trocar eficiência pelos fatores ambientes de fluidos. Os condicionadores de ar residenciais têm testemunhado a troca de operação com R-22 (um HCFC - hidrocarboneto com flúor e carbono) por R-410A (uma mistura de hidrocarbonetos halogenados) não por ser mais eficiente, mas por não agredir a camada de ozônio.</p>
+<p>O engenheiro ou a engenheira deve estar atualizado e atento às normas ambientais ao analisar os ciclos - ou então não vai conseguir realizar a sua profissão.</p>
 
 </div>
 </div>
@@ -252,6 +259,9 @@ div.csl-indent {
 <div id="refs" class="references csl-bib-body" entry-spacing="1">
 <div id="ref-bib:callen" class="csl-entry">
 CALLEN, H. B. <strong>Thermodynamics and an Introduction to Thermostatistics</strong>. 2. ed. [s.l.] John Wiley; Sons, 1985.
+</div>
+<div id="ref-bib:Taylor1995a" class="csl-entry">
+TAYLOR, C. F. <strong><span>An<span>á</span>lise dos motores de combust<span>ã</span>o interna</span></strong>. S<span>ã</span>o Paulo: Edgard Bl<span>ü</span>cher, 1995.
 </div>
 </div>
             </section>

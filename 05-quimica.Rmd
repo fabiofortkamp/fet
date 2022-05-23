@@ -2,7 +2,116 @@
 
 Diversos sistemas de engenharia funcionam à base de reações químicas, mas talvez o exemplo mais familiar para os estudantes são as reações de *combustão* que acontecem em Máquinas Térmicas: motores de combustão interna, turbinas a vapor e turbinas a gás. O desempenho dos motores é bastante dependente de como a combustão acontece [@bib:Heywood1988], em termos de taxas, variações de temperatura e pressão e condições inicial e final de equilíbrio, e essas ferramentas são fornecidas pelo estudo da *Termodinâmica Química* (ou Termoquímica): relações termodinâmicas envolvendo sistemas reativos.
 
-As principais aplicações de reações químicas acontecem geralmente com *gases*: vapores de hidrocarbonetos, oxigênio, monóxido e dióxido de carbono, nitrogênio e seus óxidos, vapor d'água para citar os principais. Mesmo quando a reação inicia com líquido (como a gasolina e o diesel), o líquido se vaporiza antes de entrar em combustão (a gasolina pela energia entregue pela vela do motor e o diesel pelo ar quente comprimido antes da injeção). A hipótese de *gases ideais* é bastante adequada nessas situações analisadas [@bib:Heywood1988]; mesmo que o vapor d'água, por exemplo, costume ser um contra-exemplo de vapor que não pode ser considerado como gás ideal, a sua pressão parcial (cf. Cap. \@ref(misturas)) em sistemas de combustão vai estar bem abaixo da sua pressão crítica, validando a hipótese de gás ideal [@bib:cengel].
+As principais aplicações de reações químicas acontecem geralmente com *gases*: vapores de hidrocarbonetos, oxigênio, monóxido e dióxido de carbono, nitrogênio e seus óxidos, vapor d'água, óxidos de enxofre. Mesmo quando a reação inicia com líquido (como a gasolina e o diesel em motores automotivos), o líquido se vaporiza antes de entrar em combustão (a gasolina pela energia entregue pela vela do motor e o diesel pelo ar quente comprimido antes da injeção). A hipótese de *gases ideais* é bastante adequada nessas situações analisadas [@bib:Heywood1988]; mesmo que o vapor d'água, por exemplo, costume ser um contra-exemplo de vapor que não pode ser considerado como gás ideal, a sua pressão parcial (cf. Cap. \@ref(misturas)) em sistemas de combustão vai estar bem abaixo da sua pressão crítica, validando a hipótese de gás ideal [@bib:cengel]. Sendo assim, este texto se concentra em desenvolver relações para a reação química de gases ideais e as implicações disto.
+
+Vamos começar assumindo uma câmara de combustão (presente em qualquer Máquina Térmica) cheia de gases potencialmente reagentes. A primeira pergunta a ser respondida é: esses gases de fato vão reagir? Não necessariamene, porque pode ocorrer **equilíbrio químico** os compoentnes.
+
+Considere o sistema formado pelos gases sendo analisados, que estão a uma determinada temperatura $T$ e a uma determinada pressão $P$. Como primeiro modelo, vamos assumir que essas propriedades são controladas e não mudam, e que possivelmente ocorre reação química; vai haver então variação das propriedades extensivas como entalpia $H$ e entropia $S$ devido apenas ao rearranjo de átomos e moléculas e mudança na composição química. Este sistema pode trocar uma quantidade de calor $Q$ com a vizinhança (positivo quando entra no sistema); a Segunda Lei da Termodinâmica (cf. Cap. \@ref(seglei)) requer então:
+
+$$
+\Delta S \ge \frac{Q}{T}
+$$
+
+onde a desigualdade ocorre quando há uma *geração* de entropia em um processo internamente irreversível.
+
+Supondo que todo trabalho ocorra de maneira reversível, a quantidade de calor em um processo isobático como esse satisfaz:
+
+$$
+Q = \Delta H
+$$
+
+e portanto 
+
+$$
+\Delta H - T \Delta S \le 0
+$$
+onde o lado esquerdo é a variação da *energia de Gibbs* $G = H - TS$ em um processo isotérmico e isobático. Logo, em uma reação:
+
+$$
+\Delta G \le 0
+$$
+
+e então concluímos que as reações ocorrem no sentido de diminuir a energia de Gibbs. Quando ela estabiliza (i.e. para de diminuir), a reação se conclui e o sistema atingiu o equilíbrio. 
+Uma reação estequiométrica pode ser escrita como [@bib:Heywood1988]:
+
+$$
+\sum_i \nu_i M_i = 0
+$$
+onde $\nu_i$ são os coeficientes estequiométricos, positivos para os produtos e negativos para os reagentes, e $M_i$ são os componentes.
+
+Suponha uma reação onde $M_a$ e $M_b$ formando $M_c$ e $M_d$. Essa reação se completa? Para isso, vamos assumir que $\delta n_a <0$ de $M_a$ sejam consumidos. Para manter a estequiometria, $\frac{\nu_b}{\nu_a}\delta n_a$ de $M_b$ também vão ser consumidos. Ou seja, o seguinte balanço deve ser satisfeito:
+
+$$
+\frac{\delta n _a}{\nu _a} = \frac{\delta n _b}{\nu _b} = \cdots
+$$
+
+A mudança de energia de Gibbs é então:
+
+$$
+\Delta G = \sum_i \mu_i \delta n_i
+$$
+
+onde $\mu_i$ é potencial químico do componente $i$. **Assumindo que todos os componentes sejam gases ideais**:
+
+$$
+\mu_i (T,P) = \overline{g} _i ^o(T) + R_u T \ln \frac{y_i P}{P_o }
+$$
+onde o primeiro termo é a energia de Gibbs de formação, um dado tabelado no estado padrão $(T_o, P_o)$, e $y_i$ é a fração molar do componente na mistura.
+
+A condição de equilíbrio ($\Delta G = 0$), que equivale a dizer que essa reação se completa, pode então ser expressa como:
+
+$$
+\sum_i \nu _i \left( \overline{g} _i ^o(T) + R_u T \ln \frac{y_i P}{P_o} \right) = 0
+$$
+A condição de equilíbrio pode ser re-arranjada como:
+
+$$
+\sum_i \ln \left(\frac{y_i P}{P_o}\right)^{\nu_i}  = - \frac{\sum_i \overline{g}_i^o (T) \nu_i}{R_u T} = - \frac{\Delta G^o (T)}{R_u T} = \ln K_p
+$$
+onde $K_p$ é *constante de equilíbrio*, que também é um valor tabelado para reações comuns em engenharia, e que depende apenas da temperatura (você consegue visualizar por quê?) - novamente, assumindo que todos os componentes são gases ideais. O conhecimento dessa constante permite calcular a composição de equilíbrio dessa forma:
+
+$$
+K_p = \left(\prod_i n_i^{\nu_i}\right)\left(\frac{P}{n_{\mathrm{total}}}\right)^{\sum_i \nu_i}
+$$
+
+onde $P$ é a pressão da câmara de reação em atm.
+
+Há dificuldades em analisar reações reais a partir do pequeno portfólio de reações nas tabelas de $K_p$. Algumas reagras podem ajudar [@bib:cengel]:
+
+1. O $K_p$ de uma reação é o inverso da reação inversa;
+2. O $K_p$ de $x$ reações (multiplicando todos os coeficientes estequiométricos por $x$) é $K_p^x$.
+
+
+### Exemplo de aplicação de equilíbrio
+
+De [@bib:cengel]: A reação $\mathrm{N}_2 + \mathrm{O}_2 \to 2 \mathrm{NO}$ ocorre em motores de combustão interna. Determine a fração molar de equilíbrio do óxido nítrico a 1 atm, considerando temperaturas de 298K, 1000K e 1600 K.
+
+```{python}
+from math import sqrt
+
+# from [2]
+log10Kp_original = {
+  298: -15.171,
+  1000: -4.062,
+  1600: -2.290
+}
+
+for T in log10Kp_original:
+  print("T = %d K" %(T,))
+  Kp = (10**(log10Kp_original[T]))**2
+  
+  a1 = (8 - sqrt(64-16*(4-Kp)))/(2*(4-Kp))
+  a2 = (8 + sqrt(64-16*(4-Kp)))/(2*(4-Kp))
+  nN2 = (a1 if a1 > 0 else a2)
+  nO2 = nN2
+  nNO = 2*(1-nN2)
+  
+  yNO = nNO/(nN2 + nO2 + nNO)
+  print("yNO = %.5f" %(yNO))
+```
+
+Portanto, em temperaturas baixas, essas reações não tem condições de ocorrer; a formação de NO vai aumentar a energia de Gibbs. À medida que a temperatura aumenta, mais NO pode ser formado sem que $G$ aumente. E é por isso que a emissão de $\mathrm{NO}$ *aumenta* com a temperatura - um dado bastante relevante da aplicação de termodinâmica química na predição de poluentes.
+
 
 
 

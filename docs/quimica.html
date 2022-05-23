@@ -23,7 +23,7 @@
 <meta name="author" content="Fábio P. Fortkamp" />
 
 
-<meta name="date" content="2022-04-21" />
+<meta name="date" content="2022-05-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,10 @@ div.csl-indent {
 <li class="chapter" data-level="5.1" data-path="misturas.html"><a href="misturas.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one<span></span></a></li>
 <li class="chapter" data-level="5.2" data-path="misturas.html"><a href="misturas.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="quimica.html"><a href="quimica.html"><i class="fa fa-check"></i><b>6</b> Termodinâmica Química<span></span></a></li>
+<li class="chapter" data-level="6" data-path="quimica.html"><a href="quimica.html"><i class="fa fa-check"></i><b>6</b> Termodinâmica Química<span></span></a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="quimica.html"><a href="quimica.html#exemplo-de-aplicação-de-equilíbrio"><i class="fa fa-check"></i><b>6.0.1</b> Exemplo de aplicação de equilíbrio<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="conducao.html"><a href="conducao.html"><i class="fa fa-check"></i><b>7</b> Transferência de Calor por Condução<span></span></a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="conducao.html"><a href="conducao.html#condução-de-calor-e-segunda-lei-da-termodinâmica"><i class="fa fa-check"></i><b>7.1</b> Condução de Calor e Segunda Lei da Termodinâmica<span></span></a></li>
@@ -216,8 +219,95 @@ div.csl-indent {
 <div id="quimica" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Capítulo 6</span> Termodinâmica Química<a href="quimica.html#quimica" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Diversos sistemas de engenharia funcionam à base de reações químicas, mas talvez o exemplo mais familiar para os estudantes são as reações de <em>combustão</em> que acontecem em Máquinas Térmicas: motores de combustão interna, turbinas a vapor e turbinas a gás. O desempenho dos motores é bastante dependente de como a combustão acontece <span class="citation">(<a href="#ref-bib:Heywood1988" role="doc-biblioref">HEYWOOD, 1988</a>)</span>, em termos de taxas, variações de temperatura e pressão e condições inicial e final de equilíbrio, e essas ferramentas são fornecidas pelo estudo da <em>Termodinâmica Química</em> (ou Termoquímica): relações termodinâmicas envolvendo sistemas reativos.</p>
-<p>As principais aplicações de reações químicas acontecem geralmente com <em>gases</em>: vapores de hidrocarbonetos, oxigênio, monóxido e dióxido de carbono, nitrogênio e seus óxidos, vapor d’água para citar os principais. Mesmo quando a reação inicia com líquido (como a gasolina e o diesel), o líquido se vaporiza antes de entrar em combustão (a gasolina pela energia entregue pela vela do motor e o diesel pelo ar quente comprimido antes da injeção). A hipótese de <em>gases ideais</em> é bastante adequada nessas situações analisadas <span class="citation">(<a href="#ref-bib:Heywood1988" role="doc-biblioref">HEYWOOD, 1988</a>)</span>; mesmo que o vapor d’água, por exemplo, costume ser um contra-exemplo de vapor que não pode ser considerado como gás ideal, a sua pressão parcial (cf. Cap. <a href="misturas.html#misturas">5</a>) em sistemas de combustão vai estar bem abaixo da sua pressão crítica, validando a hipótese de gás ideal <span class="citation">(<a href="#ref-bib:cengel" role="doc-biblioref">ÇENGEL; BOLES, 2013</a>)</span>.</p>
+<p>As principais aplicações de reações químicas acontecem geralmente com <em>gases</em>: vapores de hidrocarbonetos, oxigênio, monóxido e dióxido de carbono, nitrogênio e seus óxidos, vapor d’água, óxidos de enxofre. Mesmo quando a reação inicia com líquido (como a gasolina e o diesel em motores automotivos), o líquido se vaporiza antes de entrar em combustão (a gasolina pela energia entregue pela vela do motor e o diesel pelo ar quente comprimido antes da injeção). A hipótese de <em>gases ideais</em> é bastante adequada nessas situações analisadas <span class="citation">(<a href="#ref-bib:Heywood1988" role="doc-biblioref">HEYWOOD, 1988</a>)</span>; mesmo que o vapor d’água, por exemplo, costume ser um contra-exemplo de vapor que não pode ser considerado como gás ideal, a sua pressão parcial (cf. Cap. <a href="misturas.html#misturas">5</a>) em sistemas de combustão vai estar bem abaixo da sua pressão crítica, validando a hipótese de gás ideal <span class="citation">(<a href="#ref-bib:cengel" role="doc-biblioref">ÇENGEL; BOLES, 2013</a>)</span>. Sendo assim, este texto se concentra em desenvolver relações para a reação química de gases ideais e as implicações disto.</p>
+<p>Vamos começar assumindo uma câmara de combustão (presente em qualquer Máquina Térmica) cheia de gases potencialmente reagentes. A primeira pergunta a ser respondida é: esses gases de fato vão reagir? Não necessariamene, porque pode ocorrer <strong>equilíbrio químico</strong> os compoentnes.</p>
+<p>Considere o sistema formado pelos gases sendo analisados, que estão a uma determinada temperatura <span class="math inline">\(T\)</span> e a uma determinada pressão <span class="math inline">\(P\)</span>. Como primeiro modelo, vamos assumir que essas propriedades são controladas e não mudam, e que possivelmente ocorre reação química; vai haver então variação das propriedades extensivas como entalpia <span class="math inline">\(H\)</span> e entropia <span class="math inline">\(S\)</span> devido apenas ao rearranjo de átomos e moléculas e mudança na composição química. Este sistema pode trocar uma quantidade de calor <span class="math inline">\(Q\)</span> com a vizinhança (positivo quando entra no sistema); a Segunda Lei da Termodinâmica (cf. Cap. <a href="seglei.html#seglei">3</a>) requer então:</p>
+<p><span class="math display">\[
+\Delta S \ge \frac{Q}{T}
+\]</span></p>
+<p>onde a desigualdade ocorre quando há uma <em>geração</em> de entropia em um processo internamente irreversível.</p>
+<p>Supondo que todo trabalho ocorra de maneira reversível, a quantidade de calor em um processo isobático como esse satisfaz:</p>
+<p><span class="math display">\[
+Q = \Delta H
+\]</span></p>
+<p>e portanto</p>
+<p><span class="math display">\[
+\Delta H - T \Delta S \le 0
+\]</span>
+onde o lado esquerdo é a variação da <em>energia de Gibbs</em> <span class="math inline">\(G = H - TS\)</span> em um processo isotérmico e isobático. Logo, em uma reação:</p>
+<p><span class="math display">\[
+\Delta G \le 0
+\]</span></p>
+<p>e então concluímos que as reações ocorrem no sentido de diminuir a energia de Gibbs. Quando ela estabiliza (i.e. para de diminuir), a reação se conclui e o sistema atingiu o equilíbrio.
+Uma reação estequiométrica pode ser escrita como <span class="citation">(<a href="#ref-bib:Heywood1988" role="doc-biblioref">HEYWOOD, 1988</a>)</span>:</p>
+<p><span class="math display">\[
+\sum_i \nu_i M_i = 0
+\]</span>
+onde <span class="math inline">\(\nu_i\)</span> são os coeficientes estequiométricos, positivos para os produtos e negativos para os reagentes, e <span class="math inline">\(M_i\)</span> são os componentes.</p>
+<p>Suponha uma reação onde <span class="math inline">\(M_a\)</span> e <span class="math inline">\(M_b\)</span> formando <span class="math inline">\(M_c\)</span> e <span class="math inline">\(M_d\)</span>. Essa reação se completa? Para isso, vamos assumir que <span class="math inline">\(\delta n_a &lt;0\)</span> de <span class="math inline">\(M_a\)</span> sejam consumidos. Para manter a estequiometria, <span class="math inline">\(\frac{\nu_b}{\nu_a}\delta n_a\)</span> de <span class="math inline">\(M_b\)</span> também vão ser consumidos. Ou seja, o seguinte balanço deve ser satisfeito:</p>
+<p><span class="math display">\[
+\frac{\delta n _a}{\nu _a} = \frac{\delta n _b}{\nu _b} = \cdots
+\]</span></p>
+<p>A mudança de energia de Gibbs é então:</p>
+<p><span class="math display">\[
+\Delta G = \sum_i \mu_i \delta n_i
+\]</span></p>
+<p>onde <span class="math inline">\(\mu_i\)</span> é potencial químico do componente <span class="math inline">\(i\)</span>. <strong>Assumindo que todos os componentes sejam gases ideais</strong>:</p>
+<p><span class="math display">\[
+\mu_i (T,P) = \overline{g} _i ^o(T) + R_u T \ln \frac{y_i P}{P_o }
+\]</span>
+onde o primeiro termo é a energia de Gibbs de formação, um dado tabelado no estado padrão <span class="math inline">\((T_o, P_o)\)</span>, e <span class="math inline">\(y_i\)</span> é a fração molar do componente na mistura.</p>
+<p>A condição de equilíbrio (<span class="math inline">\(\Delta G = 0\)</span>), que equivale a dizer que essa reação se completa, pode então ser expressa como:</p>
+<p><span class="math display">\[
+\sum_i \nu _i \left( \overline{g} _i ^o(T) + R_u T \ln \frac{y_i P}{P_o} \right) = 0
+\]</span>
+A condição de equilíbrio pode ser re-arranjada como:</p>
+<p><span class="math display">\[
+\sum_i \ln \left(\frac{y_i P}{P_o}\right)^{\nu_i}  = - \frac{\sum_i \overline{g}_i^o (T) \nu_i}{R_u T} = - \frac{\Delta G^o (T)}{R_u T} = \ln K_p
+\]</span>
+onde <span class="math inline">\(K_p\)</span> é <em>constante de equilíbrio</em>, que também é um valor tabelado para reações comuns em engenharia, e que depende apenas da temperatura (você consegue visualizar por quê?) - novamente, assumindo que todos os componentes são gases ideais. O conhecimento dessa constante permite calcular a composição de equilíbrio dessa forma:</p>
+<p><span class="math display">\[
+K_p = \left(\prod_i n_i^{\nu_i}\right)\left(\frac{P}{n_{\mathrm{total}}}\right)^{\sum_i \nu_i}
+\]</span></p>
+<p>onde <span class="math inline">\(P\)</span> é a pressão da câmara de reação em atm.</p>
+<p>Há dificuldades em analisar reações reais a partir do pequeno portfólio de reações nas tabelas de <span class="math inline">\(K_p\)</span>. Algumas reagras podem ajudar <span class="citation">(<a href="#ref-bib:cengel" role="doc-biblioref">ÇENGEL; BOLES, 2013</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>O <span class="math inline">\(K_p\)</span> de uma reação é o inverso da reação inversa;</li>
+<li>O <span class="math inline">\(K_p\)</span> de <span class="math inline">\(x\)</span> reações (multiplicando todos os coeficientes estequiométricos por <span class="math inline">\(x\)</span>) é <span class="math inline">\(K_p^x\)</span>.</li>
+</ol>
+<div id="exemplo-de-aplicação-de-equilíbrio" class="section level3 hasAnchor" number="6.0.1">
+<h3><span class="header-section-number">6.0.1</span> Exemplo de aplicação de equilíbrio<a href="quimica.html#exemplo-de-aplicação-de-equilíbrio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De <span class="citation">(<a href="#ref-bib:cengel" role="doc-biblioref">ÇENGEL; BOLES, 2013</a>)</span>: A reação <span class="math inline">\(\mathrm{N}_2 + \mathrm{O}_2 \to 2 \mathrm{NO}\)</span> ocorre em motores de combustão interna. Determine a fração molar de equilíbrio do óxido nítrico a 1 atm, considerando temperaturas de 298K, 1000K e 1600 K.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="quimica.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb3-2"><a href="quimica.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="quimica.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># from [2]</span></span>
+<span id="cb3-4"><a href="quimica.html#cb3-4" aria-hidden="true" tabindex="-1"></a>log10Kp_original <span class="op">=</span> {</span>
+<span id="cb3-5"><a href="quimica.html#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dv">298</span>: <span class="op">-</span><span class="fl">15.171</span>,</span>
+<span id="cb3-6"><a href="quimica.html#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1000</span>: <span class="op">-</span><span class="fl">4.062</span>,</span>
+<span id="cb3-7"><a href="quimica.html#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1600</span>: <span class="op">-</span><span class="fl">2.290</span></span>
+<span id="cb3-8"><a href="quimica.html#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="quimica.html#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="quimica.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> T <span class="kw">in</span> log10Kp_original:</span>
+<span id="cb3-11"><a href="quimica.html#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;T = </span><span class="sc">%d</span><span class="st"> K&quot;</span> <span class="op">%</span>(T,))</span>
+<span id="cb3-12"><a href="quimica.html#cb3-12" aria-hidden="true" tabindex="-1"></a>  Kp <span class="op">=</span> (<span class="dv">10</span><span class="op">**</span>(log10Kp_original[T]))<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-13"><a href="quimica.html#cb3-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-14"><a href="quimica.html#cb3-14" aria-hidden="true" tabindex="-1"></a>  a1 <span class="op">=</span> (<span class="dv">8</span> <span class="op">-</span> sqrt(<span class="dv">64</span><span class="op">-</span><span class="dv">16</span><span class="op">*</span>(<span class="dv">4</span><span class="op">-</span>Kp)))<span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>(<span class="dv">4</span><span class="op">-</span>Kp))</span>
+<span id="cb3-15"><a href="quimica.html#cb3-15" aria-hidden="true" tabindex="-1"></a>  a2 <span class="op">=</span> (<span class="dv">8</span> <span class="op">+</span> sqrt(<span class="dv">64</span><span class="op">-</span><span class="dv">16</span><span class="op">*</span>(<span class="dv">4</span><span class="op">-</span>Kp)))<span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>(<span class="dv">4</span><span class="op">-</span>Kp))</span>
+<span id="cb3-16"><a href="quimica.html#cb3-16" aria-hidden="true" tabindex="-1"></a>  nN2 <span class="op">=</span> (a1 <span class="cf">if</span> a1 <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> a2)</span>
+<span id="cb3-17"><a href="quimica.html#cb3-17" aria-hidden="true" tabindex="-1"></a>  nO2 <span class="op">=</span> nN2</span>
+<span id="cb3-18"><a href="quimica.html#cb3-18" aria-hidden="true" tabindex="-1"></a>  nNO <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>nN2)</span>
+<span id="cb3-19"><a href="quimica.html#cb3-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-20"><a href="quimica.html#cb3-20" aria-hidden="true" tabindex="-1"></a>  yNO <span class="op">=</span> nNO<span class="op">/</span>(nN2 <span class="op">+</span> nO2 <span class="op">+</span> nNO)</span>
+<span id="cb3-21"><a href="quimica.html#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;yNO = </span><span class="sc">%.5f</span><span class="st">&quot;</span> <span class="op">%</span>(yNO))</span></code></pre></div>
+<pre><code>## T = 298 K
+## yNO = 0.00000
+## T = 1000 K
+## yNO = 0.00004
+## T = 1600 K
+## yNO = 0.00256</code></pre>
+<p>Portanto, em temperaturas baixas, essas reações não tem condições de ocorrer; a formação de NO vai aumentar a energia de Gibbs. À medida que a temperatura aumenta, mais NO pode ser formado sem que <span class="math inline">\(G\)</span> aumente. E é por isso que a emissão de <span class="math inline">\(\mathrm{NO}\)</span> <em>aumenta</em> com a temperatura - um dado bastante relevante da aplicação de termodinâmica química na predição de poluentes.</p>
 
+</div>
 </div>
 <h3>Referências<a href="referências.html#referências" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body" entry-spacing="1">
